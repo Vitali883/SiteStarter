@@ -7,7 +7,7 @@ footer{
    color: white;
    text-align: center;
 }
-/* *{
+/* * {
   padding:0px;
   margin:0px;
   font-family: sans-serif;
@@ -16,5 +16,32 @@ footer{
   position: fixed;
   width:200px;
   height:100%;
-  background: lightskyblue;
+  background: rgb(28, 31, 32);
+  left: -200px;
+  transition: all 500ms linear;
+}
+
+#sidemenu.active {
+  left:0px;
+}
+
+#sidemenu ul li {
+  list-style: none;
+  color: white;
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+
+#sidemenu .toggle-btn{
+  position: absolute;
+  left: 230px;
+  cursor: pointer;
+}
+
+#sidemenu .toggle-btn span{
+  display: block;
+  width: 30px;
+  height: 5px;
+  background: black;
+  margin: 5px 0px;
 }

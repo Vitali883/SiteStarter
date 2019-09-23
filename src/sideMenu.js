@@ -1,15 +1,14 @@
 import React from 'react';
 
-function test(){
-    alert('here');
+function ToggleSideMenu(){
+    document.getElementById('sidemenu').classList.toggle('active');
 }
 
 class SideMenu extends React.Component{
     render(){
         return(
             <div id="sidemenu">
-                
-                <div class="toggle-btn">
+                <div class="toggle-btn" onClick={() => ToggleSideMenu()}>
                     <span></span>
                     <span></span>
                     <span></span>
