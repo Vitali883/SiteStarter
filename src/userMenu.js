@@ -1,12 +1,12 @@
 import React from 'react';
 
-class SideMenu extends React.Component{
+class UserMenu extends React.Component{
     render(){
         return(
             <div>
-                <p>SideMenu</p>
+                <p>User menu</p>
             </div>
         )
     }    
 }
-export default SideMenu
+export default UserMenu

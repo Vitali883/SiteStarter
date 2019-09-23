@@ -7,8 +7,19 @@ function test(){
 class SideMenu extends React.Component{
     render(){
         return(
-            <div>
-                <p onClick={() => test()}>SideMenu</p>
+            <div id="sidemenu">
+                
+                <div class="toggle-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul>
+                    <li>Users</li>
+                    <li>Posts</li>
+                    <li>Settings</li>
+                </ul>
             </div>
         )
     }    

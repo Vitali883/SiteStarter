@@ -1,4 +1,3 @@
-
 footer{
   position: fixed;
    left: 0;
@@ -7,4 +6,15 @@ footer{
    background-color: red;
    color: white;
    text-align: center;
+}
+/* *{
+  padding:0px;
+  margin:0px;
+  font-family: sans-serif;
+} */
+#sidemenu {
+  position: fixed;
+  width:200px;
+  height:100%;
+  background: lightskyblue;
 }
