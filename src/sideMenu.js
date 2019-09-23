@@ -1,10 +1,14 @@
 import React from 'react';
 
+function test(){
+    alert('here');
+}
+
 class SideMenu extends React.Component{
     render(){
         return(
             <div>
-                <p>SideMenu</p>
+                <p onClick={() => test()}>SideMenu</p>
             </div>
         )
     }    
