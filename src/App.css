@@ -1,3 +1,6 @@
+*{
+  font-family: 'PT Serif', serif;
+}
 #circle {
   width: 15px;
   height: 15px;
@@ -80,9 +83,28 @@ main {
 
 .SideMenu ul li {
   list-style: none;
-  color: white;
-  padding: 15px 10px;
+  color: white; 
+  padding: 15px 30px;
   border-bottom: 1px solid rgba(100,100,100,0.3);
+  cursor: pointer;
+}
+
+.SideMenu ul li i{
+  margin-right:10px
+}
+
+.SideMenu ul li:hover {
+  list-style: none;
+  color: rgb(255, 208, 0); 
+  padding: 15px 37px;
+  border-bottom: 1px solid rgba(100,100,100,0.3);
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.SideMenu ul{
+  margin: 0;
+  padding: 0;
 }
 
 Header .toggle-btn {

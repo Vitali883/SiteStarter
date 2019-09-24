@@ -5,7 +5,7 @@ import React from 'react';
     }
 
     window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn') && !event.target.matches('.UserMenu__profile_img')) {
+        if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown') && !event.target.matches('.UserMenu__profile_img') && !event.target.matches('.UserMenu__profile') && !event.target.matches('.UserMenu') ) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
             for (i = 0; i < dropdowns.length; i++) {
@@ -24,10 +24,10 @@ class UserMenu extends React.Component{
             <div className="UserMenu">
                 <i id="UserMenu__Bell" class="fa fa-bell fa-2x" aria-hidden="true"><div id="circle">2</div></i>
 
-                <div className="UserMenu__profile">
-                    <img class="UserMenu__profile_img" onMouseDown={() => openMenu()}  alt="user_img" src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"/>
+                <div onMouseDown={() => openMenu()} className="UserMenu__profile">
+                    <img class="UserMenu__profile_img" alt="user_img" src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"/>
                     <div class="dropdown">
-                        <button onMouseDown={() => openMenu()} class="dropbtn">Maria Zvaginceva</button>
+                        <button class="dropbtn">Maria Zvaginceva</button>
                         <div id="myDropdown" class="dropdown-content">
                                 <a href="#home">Home</a>
                                 <a href="#about">About</a>

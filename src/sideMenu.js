@@ -5,9 +5,10 @@ class SideMenu extends React.Component{
         return(
             <div class="SideMenu">
                 <ul>
-                    <li>Users</li>
-                    <li>Posts</li>
-                    <li>Settings</li>
+                    <li><i class="fa fa-bars" aria-hidden="true"></i>Dashboard</li>
+                    <li><i class="fa fa-users" aria-hidden="true"></i>Users</li>
+                    <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Posts</li>
+                    <li><i class="fa fa-cog" aria-hidden="true"></i>Settings</li>
                 </ul>
             </div>
         )
