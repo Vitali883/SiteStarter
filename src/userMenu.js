@@ -29,9 +29,10 @@ class UserMenu extends React.Component{
                     <div class="dropdown">
                         <button class="dropbtn">Maria Zvaginceva</button>
                         <div id="myDropdown" class="dropdown-content">
-                                <a href="#home">Home</a>
-                                <a href="#about">About</a>
-                                <a href="#contact">Contact</a>
+                                <a href="#home">Profile</a>
+                                <a href="#about">Edit profile</a>
+                                <span></span>
+                                <a id="logout_btn" href="#login">Logout</a>
                         </div>
                     </div>
                 </div>                      
