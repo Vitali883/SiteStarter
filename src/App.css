@@ -13,7 +13,6 @@ Header {
   grid-area: header;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
 }
 
 .UserMenu {
@@ -47,6 +46,24 @@ main {
   color: white;
   padding: 15px 10px;
   border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+
+Header .toggle-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+Header .toggle-btn span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background: black;
+  margin: 5px 67px 0px 10px;
+}
+#Toggle-btn_Logo {
+  display: flex;
+  align-items: center;
 }
 
 /* SideBar Options */
