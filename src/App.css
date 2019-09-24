@@ -9,10 +9,16 @@
 }
 
 Header {
-  width: 100vw;
-  /* border: solid; */
   background-color: cornflowerblue;
   grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.UserMenu {
+  display: flex;
+  align-items: center;
 }
 
 #sidemenu {

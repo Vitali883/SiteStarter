@@ -4,7 +4,7 @@ class Logo extends React.Component{
     render(){
         return(
             <div>
-                <p>Logo</p>
+                <h1>SSLogo</h1>
             </div>
         )
     }    
