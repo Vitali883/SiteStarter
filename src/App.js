@@ -6,6 +6,7 @@ import Footer from "./footer"
 import SideMenu from "./sideMenu"
 import Content from "./content.js"
 
+
 function App() {
   return (
     <div className="main_container">

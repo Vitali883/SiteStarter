@@ -46,10 +46,9 @@ Header {
   margin-right:40px;
 }
 
-.SideMenu {
+#SideMenu {
   width: 300px;
   background: rgb(47, 46, 46);
-  left: -200px;
   grid-area: sidebar;
   transition: all 500ms linear;
   box-shadow: 4px 1px 4px -1px rgba(0,0,0,0.30);
@@ -93,19 +92,28 @@ main {
   background: rgba(243, 244, 246, 0.1);
 }
 
-.SideMenu ul li {
+#SideMenu ul li {
   list-style: none;
   color: white; 
   padding: 15px 30px;
   border-bottom: 1px solid rgba(100,100,100,0.3);
   cursor: pointer;
+  white-space: nowrap;
 }
 
-.SideMenu ul li i{
+#SideMenu ul li i{
   margin-right:10px
 }
 
-.SideMenu ul li:hover {
+#SideMenu.active {
+  width: 0px;
+}
+
+#SideMenu.active ul li{
+  border-bottom: none;
+}
+
+#SideMenu ul li:hover {
   list-style: none;
   color: rgb(255, 208, 0); 
   padding: 15px 37px;
@@ -114,7 +122,7 @@ main {
   transition: all 200ms linear;
 }
 
-.SideMenu ul{
+#SideMenu ul{
   margin: 0;
   padding: 0;
 }

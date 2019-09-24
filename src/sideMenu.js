@@ -1,9 +1,15 @@
 import React from 'react';
 
+window.onclick = function(event) {
+    if (event.target.className === "toggle-btn") {        
+        document.getElementById('SideMenu').classList.toggle('active');    
+    }
+}
+
 class SideMenu extends React.Component{
     render(){
         return(
-            <div class="SideMenu">
+            <div id="SideMenu">
                 <ul>
                     <li><i class="fa fa-bars" aria-hidden="true"></i>Dashboard</li>
                     <li><i class="fa fa-users" aria-hidden="true"></i>Users</li>

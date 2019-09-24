@@ -1,18 +1,14 @@
 import React from 'react';
 
-function ToggleSideMenu(){
-    alert('Clicked')
-    //document.getElementById('sidemenu').classList.toggle('active');
-}
 
 class Logo extends React.Component{
     render(){
         return(
             <div id="Toggle-btn_Logo">
-                <div class="toggle-btn" onClick={() => ToggleSideMenu()}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="toggle-btn">
+                    <span class="toggle-btn"></span>
+                    <span class="toggle-btn"></span>
+                    <span class="toggle-btn"></span>
                 </div>
                 <h1>SSLogo</h1>
             </div>
