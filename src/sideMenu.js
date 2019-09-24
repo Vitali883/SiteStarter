@@ -1,10 +1,10 @@
 import React from 'react';
 
-window.onclick = function(event) {
+window.addEventListener("click", function(event) {
     if (event.target.className === "toggle-btn") {        
         document.getElementById('SideMenu').classList.toggle('active');    
     }
-}
+});
 
 class SideMenu extends React.Component{
     render(){

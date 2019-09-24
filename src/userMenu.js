@@ -4,10 +4,12 @@ import React from 'react';
         document.getElementById("myDropdown").classList.toggle("show");
     }
 
-    window.onclick = function(event) {
+    window.addEventListener("click", function(event) {
+        console.log(event.target)
         if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown') && !event.target.matches('.UserMenu__profile_img') && !event.target.matches('.UserMenu__profile') && !event.target.matches('.UserMenu') ) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
+            
             for (i = 0; i < dropdowns.length; i++) {
                 var openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains('show')) {
@@ -15,7 +17,7 @@ import React from 'react';
                 }
             }
         }
-    }
+    });
     
 
 class UserMenu extends React.Component{
