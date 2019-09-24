@@ -1,7 +1,8 @@
 import React from 'react';
 
 function ToggleSideMenu(){
-    document.getElementById('sidemenu').classList.toggle('active');
+    alert('Clicked')
+    //document.getElementById('sidemenu').classList.toggle('active');
 }
 
 class Logo extends React.Component{

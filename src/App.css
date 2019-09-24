@@ -20,7 +20,7 @@ Header {
   align-items: center;
 }
 
-#sidemenu {
+.SideMenu {
   width: 200px;
   background: rgb(28, 31, 32);
   left: -200px;
@@ -41,7 +41,7 @@ main {
   background-color: rgb(83, 175, 70);
 }
 
-#sidemenu ul li {
+.SideMenu ul li {
   list-style: none;
   color: white;
   padding: 15px 10px;
