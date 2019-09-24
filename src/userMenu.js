@@ -5,7 +5,12 @@ class UserMenu extends React.Component{
         return(
             <div className="UserMenu">
                 <i id="UserMenu__Bell" class="fa fa-bell fa-2x" aria-hidden="true"><div id="circle">2</div></i>
-                <p>User menu</p>
+
+                <div className="UserMenu__profile">
+                    <img alt="user_img" src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"/>
+                    <p>Maria Zvaginceva</p> 
+                </div>
+                                                      
             </div>
         )
     }    
