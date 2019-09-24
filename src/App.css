@@ -9,23 +9,26 @@
 }
 
 Header {
-  background-color: cornflowerblue;
+  background-color: rgb(255, 255, 255);
   grid-area: header;
   display: flex;
   justify-content: space-between;
+  box-shadow: 1px 1px 5px grey;
 }
 
 .UserMenu {
   display: flex;
   align-items: center;
+  margin-right:40px;
 }
 
 .SideMenu {
-  width: 200px;
-  background: rgb(28, 31, 32);
+  width: 300px;
+  background: rgb(47, 46, 46);
   left: -200px;
   grid-area: sidebar;
   transition: all 500ms linear;
+  box-shadow: 4px 1px 4px -1px rgba(0,0,0,0.30);
 }
 
 footer { 
@@ -38,7 +41,7 @@ footer {
 main {
   padding: 1rem;
   grid-area: main;
-  background-color: rgb(83, 175, 70);
+  background: rgba(243, 244, 246, 0.1);
 }
 
 .SideMenu ul li {

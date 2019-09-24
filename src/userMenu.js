@@ -5,6 +5,7 @@ class UserMenu extends React.Component{
         return(
             <div className="UserMenu">
                 <p>User menu</p>
+                <i class="fa fa-bell fa-2x" aria-hidden="true"></i>
             </div>
         )
     }    
