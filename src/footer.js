@@ -1,8 +1,8 @@
 import React from 'react';
 
-class Footer extends React.Component{
-    render(){
-        return(
+class Footer extends React.Component {
+    render() {
+        return (
             <footer>
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
@@ -10,6 +10,6 @@ class Footer extends React.Component{
                 <p>© 2019, made with love</p>
             </footer>
         )
-    }    
+    }
 }
 export default Footer

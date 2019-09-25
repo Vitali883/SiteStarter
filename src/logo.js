@@ -1,9 +1,8 @@
 import React from 'react';
 
-
-class Logo extends React.Component{
-    render(){
-        return(
+class Logo extends React.Component {
+    render() {
+        return (
             <div id="Toggle-btn_Logo">
                 <div class="toggle-btn">
                     <span class="toggle-btn"></span>
@@ -13,6 +12,6 @@ class Logo extends React.Component{
                 <h1>SSLogo</h1>
             </div>
         )
-    }    
+    }
 }
 export default Logo

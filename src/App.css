@@ -1,6 +1,7 @@
-*{
+* {
   font-family: 'PT Serif', serif;
 }
+
 #circle {
   width: 15px;
   height: 15px;
@@ -22,14 +23,11 @@
   cursor: pointer;
 }
 
-.main_container{
-	min-height: 100vh;
+.main_container {
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-    "header header header header"
-    "sidebar main main main"
-    "sidebar footer footer footer";
+  grid-template-areas: "header header header header""sidebar main main main""sidebar footer footer footer";
 }
 
 Header {
@@ -43,7 +41,7 @@ Header {
 .UserMenu {
   display: flex;
   align-items: center;
-  margin-right:40px;
+  margin-right: 40px;
 }
 
 #SideMenu {
@@ -51,39 +49,42 @@ Header {
   background: rgb(47, 46, 46);
   grid-area: sidebar;
   transition: all 500ms linear;
-  box-shadow: 4px 1px 4px -1px rgba(0,0,0,0.30);
+  box-shadow: 4px 1px 4px -1px rgba(0, 0, 0, 0.30);
 }
-.UserMenu__profile{
+
+.UserMenu__profile {
   display: flex;
   align-items: center;
   cursor: pointer;
-  
+
 }
 
-.UserMenu__profile img{
+.UserMenu__profile img {
   height: 45px;
   width: 45px;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 100px;
 }
-footer { 
+
+footer {
   height: 60px;
   background-color: rgb(240, 240, 240);
   grid-area: footer;
   display: flex;
   justify-content: space-between;
-  padding: 0px 25px;
-}
-footer a{
-  text-decoration:none;
-  padding-top: 17px;
-  cursor: pointer;
-  color: rgb(82, 82, 82)
+  padding: 0 25px;
 }
 
-footer p{
-  color: rgb(59, 180, 65)
+footer a {
+  text-decoration: none;
+  padding-top: 17px;
+  cursor: pointer;
+  color: rgb(82, 82, 82);
+}
+
+footer p {
+  color: rgb(59, 180, 65);
 }
 
 main {
@@ -94,35 +95,35 @@ main {
 
 #SideMenu ul li {
   list-style: none;
-  color: white; 
+  color: white;
   padding: 15px 30px;
-  border-bottom: 1px solid rgba(100,100,100,0.3);
+  border-bottom: 1px solid rgba(100, 100, 100, 0.3);
   cursor: pointer;
   white-space: nowrap;
 }
 
-#SideMenu ul li i{
-  margin-right:10px
+#SideMenu ul li i {
+  margin-right: 10px;
 }
 
 #SideMenu.active {
-  width: 0px;
+  width: 0;
 }
 
-#SideMenu.active ul li{
+#SideMenu.active ul li {
   border-bottom: none;
 }
 
 #SideMenu ul li:hover {
   list-style: none;
-  color: rgb(255, 208, 0); 
+  color: rgb(255, 208, 0);
   padding: 15px 37px;
-  border-bottom: 1px solid rgba(100,100,100,0.3);
+  border-bottom: 1px solid rgba(100, 100, 100, 0.3);
   cursor: pointer;
   transition: all 200ms linear;
 }
 
-#SideMenu ul{
+#SideMenu ul {
   margin: 0;
   padding: 0;
 }
@@ -133,36 +134,38 @@ Header .toggle-btn {
   flex-direction: column;
   justify-content: center;
 }
+
 Header .toggle-btn span {
   display: block;
   width: 30px;
   height: 5px;
   background: black;
-  margin: 5px 67px 0px 10px;
+  margin: 5px 67px 0 10px;
 }
-#myDropdown span{
+
+#myDropdown span {
   display: block;
   width: 100%;
   height: 2px;
   background: grey;
-  margin: 0
+  margin: 0;
 }
-#myDropdown{
+
+#myDropdown {
   left: -60px;
   top: 62px;
   width: 250px;
 }
-#logout_btn{
-  color:rgb(216, 13, 13);
+
+#logout_btn {
+  color: rgb(216, 13, 13);
 }
+
 #Toggle-btn_Logo {
   display: flex;
   align-items: center;
   height: 70px;
 }
-
-
-
 
 .dropbtn {
   background-color: rgb(255, 255, 255);
@@ -184,7 +187,7 @@ Header .toggle-btn span {
   background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -195,6 +198,10 @@ Header .toggle-btn span {
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+  background-color: #ddd;
+}
 
-.show {display: block;}
+.show {
+  display: block;
+}
