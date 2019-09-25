@@ -16,3 +16,15 @@ export const login = () => {
         type: 'SIGN_IN'
     }
 }
+
+export const showSignUpPop = () => {
+    return {
+        type: 'OPEN'
+    }
+}
+
+export const closeSignUpPop = () => {
+    return {
+        type: 'CLOSE'
+    }
+}
