@@ -107,6 +107,30 @@
 #logout_btn{
   color:rgb(216, 13, 13);
 }
+
+.Sign_in_btn {
+  color:rgb(0, 162, 255);
+  background-color: white;
+  border-color: rgb(0, 162, 255);
+  border-radius: 4px;
+  margin: 13px;
+  margin-right:20px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.Sign_in_btn i {
+  margin-right: 6px;
+  position: relative;
+  top: 1px;
+}
+
+.Sign_in_btn:hover {
+  color: white;
+  background-color: rgb(5, 136, 212);
+  border-color: rgb(0, 162, 255);
+}
 /* UserMenu end */
 
 /* footer start */
@@ -143,7 +167,7 @@ main {
   width: 300px;
   background: rgb(47, 46, 46);
   grid-area: sidebar;
-  transition: all 500ms linear;
+  transition: all 350ms linear;
   box-shadow: 4px 1px 4px -1px rgba(0,0,0,0.30);
 }
 
@@ -213,3 +237,26 @@ Header .toggle-btn span {
   height: 70px;
 }
 /* Header end */
+
+
+.popup {  
+  position: fixed;  
+  width: 100%;  
+  height: 100%;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  bottom: 0;  
+  margin: auto;  
+  background-color: rgba(0,0,0, 0.5);  
+}  
+.popup_inner {  
+  position: absolute;  
+  left: 25%;  
+  right: 25%;  
+  top: 25%;  
+  bottom: 25%;  
+  margin: auto;  
+  border-radius: 20px;  
+  background: white;  
+}
