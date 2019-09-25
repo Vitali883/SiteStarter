@@ -28,3 +28,15 @@ export const closeSignUpPop = () => {
         type: 'CLOSE'
     }
 }
+
+export const isRegViewPage = () => {
+    return {
+        type: 'REG'
+    }
+}
+
+export const isLogginViewPage = () => {
+    return {
+        type: 'LOGIN'
+    }
+}
