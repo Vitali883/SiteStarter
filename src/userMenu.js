@@ -1,8 +1,6 @@
 import React from 'react';
 import Login from './login';
-import { useSelector, useDispatch } from 'react-redux';
-import { login } from './actions';
-import SignUp from './signUp';
+import {useSelector} from 'react-redux';
 
 function openMenu() {
     document
@@ -32,7 +30,7 @@ window
 function UserMenu() {
     const isLogged = useSelector(state => state.isLogged);
 
-    if(isLogged){
+    if (isLogged) {
         return (
             <div className="UserMenu">
                 <i id="UserMenu__Bell" class="fa fa-bell fa-2x" aria-hidden="true">
@@ -56,12 +54,10 @@ function UserMenu() {
                 </div>
             </div>
         )
-    }else{
-        return(
-            <Login />
-        )
+    } else {
+        return (<Login/>)
     }
-    
+
 }
 
 export default UserMenu
