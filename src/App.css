@@ -165,6 +165,7 @@ footer p {
 
 /* main start */
 main {
+  padding-top: 100px !important;
   padding: 1rem;
   grid-area: main;
   background: rgba(243, 244, 246, 0.1);
@@ -173,17 +174,16 @@ main {
 
 /* SideMenu start */
 #SideMenu {
-  width: 300px;
-  background: rgb(47, 46, 46);
+  width: 0px;
+  background: rgba(47, 46, 46, 0.98);
   grid-area: sidebar;
-  transition: all 350ms linear;
+  transition: all 250ms linear;
   box-shadow: 4px 1px 4px -1px rgba(0,0,0,0.30);
   float: left;
-  position: absolute;
-  right: 816px;
+  position: fixed;
   left: 0px;
   top: 71px;
-  height: 92.5%;
+  height: 92.7vh;
 }
 
 #SideMenu ul li {
@@ -200,20 +200,22 @@ main {
 }
 
 #SideMenu.active {
-  width: 0;
+  width: 300px;
 }
 
 #SideMenu.active ul li {
   border-bottom: none;
+  display: block;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+#SideMenu ul li {
+  display: none;
 }
 
 #SideMenu ul li:hover {
   list-style: none;
   color: rgb(255, 208, 0);
   padding: 15px 37px;
-  border-bottom: 1px solid rgba(100, 100, 100, 0.3);
-  cursor: pointer;
-  transition: all 200ms linear;
 }
 
 #SideMenu ul {
@@ -226,6 +228,8 @@ main {
 Header {
   background-color: rgb(255, 255, 255);
   grid-area: header;
+  position: fixed;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   box-shadow: 1px 1px 5px grey;

@@ -57,7 +57,7 @@ function SignUp() {
                         <input type="password" id="password" name="password" placeholder="Confirm password" />
 
                         <br />
-                        <button type="submit">Login</button>
+                        <button type="submit">Registration</button>
                     </div>
                     <div id="popUp_Footer">
                         <button onClick={() => dispatch(isLogginViewPage())}><i class="fa fa-user fa-2x" aria-hidden="true"></i> Login</button>
