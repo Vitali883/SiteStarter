@@ -2,6 +2,44 @@
   font-family: 'PT Serif', serif;
 }
 
+/* main_container start */
+.main_container{
+	min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header header header""sidebar main main main""sidebar footer footer footer";
+}
+/* main_container end */
+
+/* UserMenu start */
+.UserMenu {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+#UserMenu__Bell {
+  margin: 7px;
+  display: flex;
+  align-items: center;
+  color: gray;
+  cursor: pointer;
+}
+
+.UserMenu__profile{
+  display: flex;
+  align-items: center;
+  cursor: pointer;  
+}
+
+.UserMenu__profile img {
+  height: 45px;
+  width: 45px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 100px;
+}
+
 #circle {
   width: 15px;
   height: 15px;
@@ -15,59 +53,86 @@
   position: relative;
 }
 
-#UserMenu__Bell {
-  margin: 7px;
-  display: flex;
-  align-items: center;
-  color: gray;
-  cursor: pointer;
+#myDropdown span{
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: grey;
+  margin: 0
 }
 
-.main_container {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header header header header""sidebar main main main""sidebar footer footer footer";
+#myDropdown{
+  left: -60px;
+  top: 62px;
+  width: 250px;
 }
 
-Header {
+.dropbtn {
   background-color: rgb(255, 255, 255);
-  grid-area: header;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 1px 1px 5px grey;
-}
-
-.UserMenu {
-  display: flex;
-  align-items: center;
-  margin-right: 40px;
-}
-
-#SideMenu {
-  width: 300px;
-  background: rgb(47, 46, 46);
-  grid-area: sidebar;
-  transition: all 500ms linear;
-  box-shadow: 4px 1px 4px -1px rgba(0, 0, 0, 0.30);
-}
-
-.UserMenu__profile {
-  display: flex;
-  align-items: center;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
   cursor: pointer;
-
 }
 
-.UserMenu__profile img {
-  height: 45px;
-  width: 45px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 100px;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-footer {
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+#logout_btn{
+  color:rgb(216, 13, 13);
+}
+
+.Sign_in_btn {
+  color:rgb(0, 162, 255);
+  background-color: white;
+  border-color: rgb(0, 162, 255);
+  border-radius: 4px;
+  margin: 13px;
+  margin-right:20px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.Sign_in_btn i {
+  margin-right: 6px;
+  position: relative;
+  top: 1px;
+}
+
+.Sign_in_btn:hover {
+  color: white;
+  background-color: rgb(5, 136, 212);
+  border-color: rgb(0, 162, 255);
+}
+/* UserMenu end */
+
+/* footer start */
+footer { 
   height: 60px;
   background-color: rgb(240, 240, 240);
   grid-area: footer;
@@ -86,11 +151,23 @@ footer a {
 footer p {
   color: rgb(59, 180, 65);
 }
+/* footer end */
 
+/* main start */
 main {
   padding: 1rem;
   grid-area: main;
   background: rgba(243, 244, 246, 0.1);
+}
+/* main end */
+
+/* SideMenu start */
+#SideMenu {
+  width: 300px;
+  background: rgb(47, 46, 46);
+  grid-area: sidebar;
+  transition: all 350ms linear;
+  box-shadow: 4px 1px 4px -1px rgba(0,0,0,0.30);
 }
 
 #SideMenu ul li {
@@ -127,6 +204,16 @@ main {
   margin: 0;
   padding: 0;
 }
+/* SideMenu end */
+
+/* Header start */
+Header {
+  background-color: rgb(255, 255, 255);
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 5px grey;
+}
 
 Header .toggle-btn {
   cursor: pointer;
@@ -143,65 +230,32 @@ Header .toggle-btn span {
   margin: 5px 67px 0 10px;
 }
 
-#myDropdown span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: grey;
-  margin: 0;
-}
-
-#myDropdown {
-  left: -60px;
-  top: 62px;
-  width: 250px;
-}
-
-#logout_btn {
-  color: rgb(216, 13, 13);
-}
-
 #Toggle-btn_Logo {
   display: flex;
   align-items: center;
   height: 70px;
 }
+/* Header end */
 
-.dropbtn {
-  background-color: rgb(255, 255, 255);
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {
-  background-color: #ddd;
-}
-
-.show {
-  display: block;
+.popup {  
+  position: fixed;  
+  width: 100%;  
+  height: 100%;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  bottom: 0;  
+  margin: auto;  
+  background-color: rgba(0,0,0, 0.5);  
+}  
+.popup_inner {  
+  position: absolute;  
+  left: 25%;  
+  right: 25%;  
+  top: 25%;  
+  bottom: 25%;  
+  margin: auto;  
+  border-radius: 20px;  
+  background: white;  
 }
