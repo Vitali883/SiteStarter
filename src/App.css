@@ -301,6 +301,8 @@ Header .toggle-btn span {
 }
 
 #popUp_Content{
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
   padding: 14%;
   font-size: 18px;
   width: 100%;
@@ -328,7 +330,7 @@ Header .toggle-btn span {
   opacity: 0.8;
 }
 #popUp_Footer{
-  margin-top: 30px;
+  margin-top: 10px;
 }
 #popUp_Footer button{
   width: 100%;
