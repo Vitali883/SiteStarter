@@ -8,6 +8,7 @@ import {createStore} from 'redux';
 import allReducer from './reducers';
 import {Provider} from 'react-redux';
 
+
 // called when state changed (Redux state)
 function saveToLocalStorage(state) {
     try {

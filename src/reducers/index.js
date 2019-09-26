@@ -8,7 +8,7 @@ const allReducer = combineReducers({
     counter: counterReducer,
     isLogged: loggedReducer,
     showSignUpPop: signUpReducer,
-    isLogginViewPage: isLogginViewPageReducer
+    isLogginViewPage: isLogginViewPageReducer,
 })
 
 export default allReducer;
