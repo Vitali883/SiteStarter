@@ -20,15 +20,16 @@ function Content(){
                 <Switch>
                     
                     
-                    {/* <Route path={"/" + cl + "/home"} component={About} /> */}
+                    <Route path={"/" + curr_lang + "/about"} component={About} />
+                    <Route path={"/" + curr_lang + "/home"} component={Home} />
                     
                     
                     
-                    <Route path="/en/"> 
+                    {/* <Route path="/en/"> 
                         <Route path="/en/home" component={Home} /> 
                     </Route>
                     <Route path="/et/" component={About} />
-                    <Route path="/ru/" component={About} />
+                    <Route path="/ru/" component={About} /> */}
 
                 </Switch>                
             </Router>

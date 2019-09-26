@@ -1,11 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
+    const curr_lang = useSelector(state => state.curr_lang);
+
     return(
         <nav className="Navbar">
-            <a href="/home">Home</a>
-            <a href="/about">About</a>
+            <a href={"/" + curr_lang + "/home"}>Home</a>
+            <a href={"/" + curr_lang + "/about"}>About</a>
         </nav>
     )
 }
