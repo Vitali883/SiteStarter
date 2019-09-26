@@ -12,7 +12,7 @@ function Content(){
     const dispatch = useDispatch();
 
     return(
-        <main>            
+        <main>
             <button onClick={() => dispatch(choosen_language('ru'))}>RU</button>
             <button onClick={() => dispatch(choosen_language('en'))}>EN</button>
             <button onClick={() => dispatch(choosen_language('et'))}>ET</button>

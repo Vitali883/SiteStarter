@@ -43,7 +43,6 @@ export const isLogginViewPage = () => {
 
 export const choosen_language = ln => {
     return {
-        type: 'CCL',
-        ln
+        type: ln,
     }
 }
