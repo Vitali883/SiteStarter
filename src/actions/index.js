@@ -40,3 +40,10 @@ export const isLogginViewPage = () => {
         type: 'LOGIN'
     }
 }
+
+export const choosen_language = ln => {
+    return {
+        type: 'CCL',
+        ln
+    }
+}
