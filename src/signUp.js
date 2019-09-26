@@ -39,7 +39,7 @@ function SignUp() {
                 <div className='popup_inner'>
                     <div id="popUp_Header">
                         <span></span>
-                        <h1>Registration form</h1>
+                        <h1>Sign up</h1>
                         <button onClick={() => dispatch(closeSignUpPop())}>X</button>
                     </div>
                     <div id="popUp_Content">
@@ -60,7 +60,7 @@ function SignUp() {
                         <button type="submit">Registration</button>
                     </div>
                     <div id="popUp_Footer">
-                        <button onClick={() => dispatch(isLogginViewPage())}><i class="fa fa-user fa-2x" aria-hidden="true"></i> Login</button>
+                        <button onClick={() => dispatch(isLogginViewPage())}><i class="fa fa-user fa-2x" aria-hidden="true"></i> Back to sign in</button>
                     </div>
                 </div>
             </div>
