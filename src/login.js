@@ -11,7 +11,7 @@ function Login() {
     if (!isShowingPopUp) {
         return (
             <button onClick={() => dispatch(showSignUpPop())} className="Sign_in_btn">
-                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                <i className="fa fa-user fa-2x" aria-hidden="true"></i>
                 SIGN IN
             </button>
         )

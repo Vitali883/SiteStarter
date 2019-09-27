@@ -9,7 +9,6 @@ import allReducer from './reducers';
 import {Provider} from 'react-redux';
 
 
-// called when state changed (Redux state)
 function saveToLocalStorage(state) {
     try {
         const serializedState = JSON.stringify(state);
@@ -19,7 +18,7 @@ function saveToLocalStorage(state) {
     }
 }
 
-// called on createStore (for example on refresh)
+
 function loadFromLocalStorage() {
     try {
         const serializedState = localStorage.getItem('state')
@@ -32,15 +31,17 @@ function loadFromLocalStorage() {
     }
 }
 
+
 const persistedState = loadFromLocalStorage()
 
 let store = createStore(allReducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),);
 
-store.subscribe(() => saveToLocalStorage(store.getState())) // subscribe - if state changed calling the save function
+store.subscribe(() => saveToLocalStorage(store.getState()))
+
 
 ReactDOM.render(
     <Provider store={store}>
-    <App/>
-</Provider>, document.getElementById('root'));
+        <App/>
+    </Provider>, document.getElementById('root'));
 
 serviceWorker.unregister();

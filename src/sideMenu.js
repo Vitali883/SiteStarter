@@ -15,13 +15,13 @@ class SideMenu extends React.Component {
             <div id="SideMenu">
                 <ul>
                     <li>
-                        <i class="fa fa-bars" aria-hidden="true"></i>Dashboard</li>
+                        <i className="fa fa-bars" aria-hidden="true"></i>Dashboard</li>
                     <li>
-                        <i class="fa fa-users" aria-hidden="true"></i>Users</li>
+                        <i className="fa fa-users" aria-hidden="true"></i>Users</li>
                     <li>
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Posts</li>
+                        <i className="fa fa-pencil-square-o" aria-hidden="true"></i>Posts</li>
                     <li>
-                        <i class="fa fa-cog" aria-hidden="true"></i>Settings</li>
+                        <i className="fa fa-cog" aria-hidden="true"></i>Settings</li>
                 </ul>
             </div>
         )

@@ -18,7 +18,6 @@ function openNotifications() {
 
 window
     .addEventListener("click", function (event) {
-        console.log(event.target)
         if (
             !event.target.matches('.dropbtn') && 
             !event.target.matches('.dropdown') && 
