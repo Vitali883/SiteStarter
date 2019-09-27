@@ -274,7 +274,7 @@ Header .toggle-btn span {
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .Navbar a {
