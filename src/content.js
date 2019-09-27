@@ -7,11 +7,9 @@ import {choosen_language} from './actions';
 import { useSelector, useDispatch } from 'react-redux';
 
 
-function Content() {
-    
-    const curr_lang = useSelector(state => state.curr_lang);
+function Content() {    
+    const curr_lang = useSelector(state => state.userLanguage);
     const dispatch = useDispatch();
-    
 
     return(
         <main>
@@ -20,17 +18,9 @@ function Content() {
             <button onClick={() => dispatch(choosen_language('et'))}>ET</button>
 
             <Router>
-                <Switch>                    
-                    
+                <Switch>               
                     <Route path={"/" + curr_lang + "/about"} component={About} />
-                    <Route path={"/" + curr_lang + "/home"} component={Home} />                   
-                    
-                    {/* <Route path="/en/"> 
-                        <Route path="/en/home" component={Home} /> 
-                    </Route>
-                    <Route path="/et/" component={About} />
-                    <Route path="/ru/" component={About} /> */}
-
+                    <Route path={"/" + curr_lang + "/home"} component={Home} />
                 </Switch>                
             </Router>
         </main>

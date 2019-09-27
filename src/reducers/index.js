@@ -10,7 +10,7 @@ const allReducer = combineReducers({
     isLogged: loggedReducer,
     showSignUpPop: signUpReducer,
     isLogginViewPage: isLogginViewPageReducer,
-    curr_lang: curr_langReducer
+    userLanguage: curr_langReducer
 })
 
 export default allReducer;

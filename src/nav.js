@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 function Navbar() {
-    const curr_lang = useSelector(state => state.curr_lang);
+    const curr_lang = useSelector(state => state.userLanguage);
 
     return(
         <nav className="Navbar">

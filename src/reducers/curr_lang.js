@@ -1,13 +1,13 @@
 const curr_langReducer = (language = 'en', action) => {
     switch(action.type) {
         case "en":
-            return language = "en";
+            return "en";
         case "ru":
-            return language = "ru";
+            return "ru";
         case "et":
-            return language = "et";
+            return "et";
         default:
-            return language = 'ru';
+            return language;
     }
 }
 
