@@ -303,6 +303,21 @@ Header .toggle-btn span {
     display: none;
   }
 }
+#languages__container {
+  white-space: nowrap;
+}
+#languages__container button{
+  margin: 0px 10px;
+  border:none;
+  font-size: 20px;
+  cursor: pointer;
+  background: white;
+  font-weight: bold;
+  transition: all 200ms linear;
+}
+#languages__container button:hover{
+  color:rgb(0, 162, 255);
+}
 /* Navbar end */
 
 /* Sign up start */

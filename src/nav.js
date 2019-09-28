@@ -26,7 +26,7 @@ function Navbar() {
                 <a href={"/" + curr_lang + "/home"}>Home</a>
                 <a href={"/" + curr_lang + "/about"}>About</a>
             </div>
-            <div>
+            <div id="languages__container">
                 <button onMouseUp={() => reloadPage('ru')} onClick={() => dispatch(choosen_language('ru'))}>RU</button>
                 <button onMouseUp={() => reloadPage('en')} onClick={() => dispatch(choosen_language('en'))}>EN</button>
                 <button onMouseUp={() => reloadPage('et')} onClick={() => dispatch(choosen_language('et'))}>ET</button>
