@@ -4,27 +4,15 @@ export const login = () => {
     }
 }
 
-export const showSignUpPop = () => {
+export const SignUpPopView = view => {
     return {
-        type: 'OPEN'
+        type: view
     }
 }
 
-export const closeSignUpPop = () => {
+export const lognFormPageView = view => {
     return {
-        type: 'CLOSE'
-    }
-}
-
-export const isRegViewPage = () => {
-    return {
-        type: 'REG'
-    }
-}
-
-export const isLogginViewPage = () => {
-    return {
-        type: 'LOGIN'
+        type: view
     }
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import SignUp from './signUp';
 import {useSelector, useDispatch} from 'react-redux';
-import {showSignUpPop} from './actions';
+import {SignUpPopView} from './actions';
 
 function Login() {
     const isShowingPopUp = useSelector(state => state.showSignUpPop);
@@ -10,7 +10,7 @@ function Login() {
 
     if (!isShowingPopUp) {
         return (
-            <button onClick={() => dispatch(showSignUpPop())} className="Sign_in_btn">
+            <button onClick={() => dispatch(SignUpPopView('OPEN'))} className="Sign_in_btn">
                 <i className="fa fa-user fa-2x" aria-hidden="true"></i>
                 SIGN IN
             </button>

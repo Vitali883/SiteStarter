@@ -1,5 +1,5 @@
 import React from 'react';
-import {closeSignUpPop, isLogginViewPage, isRegViewPage} from './actions';
+import {SignUpPopView, lognFormPageView} from './actions';
 import {useDispatch,useSelector} from 'react-redux';
 
 function SignUp() {
@@ -14,7 +14,7 @@ function SignUp() {
                     <div id="popUp_Header">
                         <span></span>
                         <h1>Sign in</h1>
-                        <button onClick={() => dispatch(closeSignUpPop())}>X</button>
+                        <button onClick={() => dispatch(SignUpPopView('CLOSE'))}>X</button>
                     </div>
                     <div id="popUp_Content">
 
@@ -28,7 +28,7 @@ function SignUp() {
                         <button type="submit">Login</button>
                     </div>
                     <div id="popUp_Footer">
-                        <button onClick={() => dispatch(isRegViewPage())}><i class="fa fa-user fa-2x" aria-hidden="true"></i> Create account</button>
+                        <button onClick={() => dispatch(lognFormPageView('REG'))}><i class="fa fa-user fa-2x" aria-hidden="true"></i> Create account</button>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@ function SignUp() {
                     <div id="popUp_Header">
                         <span></span>
                         <h1>Sign up</h1>
-                        <button onClick={() => dispatch(closeSignUpPop())}>X</button>
+                        <button onMouseUp={() => dispatch(lognFormPageView('LOGIN'))} onClick={() => dispatch(SignUpPopView('CLOSE'))}>X</button>
                     </div>
                     <div id="popUp_Content">
 
@@ -60,7 +60,7 @@ function SignUp() {
                         <button type="submit">Registration</button>
                     </div>
                     <div id="popUp_Footer">
-                        <button onClick={() => dispatch(isLogginViewPage())}><i class="fa fa-user fa-2x" aria-hidden="true"></i> Back to sign in</button>
+                        <button onClick={() => dispatch(lognFormPageView('LOGIN'))}><i class="fa fa-user fa-2x" aria-hidden="true"></i> Back to sign in</button>
                     </div>
                 </div>
             </div>
