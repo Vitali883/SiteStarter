@@ -11,7 +11,11 @@ import {Provider} from 'react-redux';
 
 function saveToLocalStorage(state) {
     try {
-        const serializedState = JSON.stringify(state);
+        const stateConfig = {
+            userLanguage: state.userLanguage,
+            isLogged: state.isLogged
+        }
+        const serializedState = JSON.stringify(stateConfig);
         localStorage.setItem('state', serializedState)
     } catch (e) {
         console.log(e)
