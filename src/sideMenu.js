@@ -7,6 +7,12 @@ window.addEventListener("click", function (event) {
             .classList
             .toggle('active');
     }
+    if(event.target.className === "Sign_in_btn"){
+        document
+            .getElementById('SideMenu')
+            .classList
+            .remove('active');
+    }
 });
 
 class SideMenu extends React.Component {
