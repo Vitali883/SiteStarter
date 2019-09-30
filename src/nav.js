@@ -4,7 +4,7 @@ import {choosen_language} from './actions'
 import { FormattedMessage } from 'react-intl'
 
 function reloadPage(lang){
-    let first_half_url = "http://vps707430.ovh.net:3000/"+lang
+    let first_half_url = "http://vps707429.ovh.net:3000/"+lang
 
     let curr_url = window.location.href
     let a = curr_url.split('/')

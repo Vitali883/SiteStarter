@@ -1,4 +1,4 @@
-export default{
+export default {
     en: {
         "nav.home" : "Home",
         "nav.about": "About"
@@ -10,5 +10,9 @@ export default{
     et: {
         "nav.home" : "Koju",
         "nav.about": "Minuga"
+    },
+    test: {
+        "nav.home" : "Kojafsfdasfdasfdasfdau",
+        "nav.about": "Minasfdsaafdasfdauga"
     }
 }
