@@ -10,9 +10,5 @@ export default {
     et: {
         "nav.home" : "Koju",
         "nav.about": "Minuga"
-    },
-    test: {
-        "nav.home" : "Kojafsfdasfdasfdasfdau",
-        "nav.about": "Minasfdsaafdasfdauga"
     }
 }

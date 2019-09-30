@@ -32,7 +32,7 @@ function loadFromLocalStorage() {
         if (lang != "en" && lang != "ru" && lang != "et") {
             lang = "en"
         }
-
+        
         let serializedState = localStorage.getItem('state')
         if (serializedState === null){
             const stateConfig = { userLanguage: lang }
