@@ -5,15 +5,24 @@ import Header from "./header"
 import Footer from "./footer"
 import SideMenu from "./sideMenu"
 import Content from "./content.js"
+import { IntlProvider } from "react-intl"
+import { useSelector } from 'react-redux';
+import messages from './messages'
 
-function App() {    
+function App() {
+    const curr_lang = useSelector(state => state.userLanguage);
     return (
-        <div className="main_container">
-            <Header/>
-            <SideMenu/>
-            <Content/>
-            <Footer/>
-        </div>
+        <IntlProvider
+            locale={curr_lang}
+            messages={messages[curr_lang]}
+        >
+            <div className="main_container">
+                <Header/>
+                <SideMenu/>
+                <Content/>
+                <Footer/>
+            </div>
+        </IntlProvider>
     );
 }
 

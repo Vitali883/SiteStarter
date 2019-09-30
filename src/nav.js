@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import {choosen_language} from './actions'
+import { FormattedMessage } from 'react-intl'
 
 function reloadPage(lang){
     let first_half_url = "http://vps707430.ovh.net:3000/"+lang
@@ -23,8 +24,18 @@ function Navbar() {
     return(
         <nav className="Navbar">
             <div>
-                <a href={"/" + curr_lang + "/home"}>Home</a>
-                <a href={"/" + curr_lang + "/about"}>About</a>
+                <a href={"/" + curr_lang + "/home"}>
+                    <FormattedMessage
+                        id="nav.home"
+                        defaultMessage="Home"
+                    />
+                </a>
+                <a href={"/" + curr_lang + "/about"}>
+                    <FormattedMessage
+                        id="nav.about"
+                        defaultMessage="About"
+                    />
+                </a>
             </div>
             <div id="languages__container">
                 <button onMouseUp={() => reloadPage('ru')} onClick={() => dispatch(choosen_language('ru'))}>RU</button>
