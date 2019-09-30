@@ -22,7 +22,6 @@ function saveToLocalStorage(state) {
     }
 }
 
-
 function loadFromLocalStorage() {
     try {
         const serializedState = localStorage.getItem('state')
@@ -34,7 +33,6 @@ function loadFromLocalStorage() {
         return undefined
     }
 }
-
 
 const persistedState = loadFromLocalStorage()
 
