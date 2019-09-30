@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import {choosen_language} from './actions'
 import { FormattedMessage } from 'react-intl'
 
+import site_config from  "./site_config";
+
 function reloadPage(lang){
-    let first_half_url = "http://vps707430.ovh.net:3000/"+lang
+    let first_half_url = site_config["url"] + lang
 
     let curr_url = window.location.href
     let a = curr_url.split('/')
@@ -14,6 +16,7 @@ function reloadPage(lang){
         seconds_half_url+='/'+a[i];
     }
     const full_url = first_half_url+seconds_half_url
+    console.log(full_url);
     window.location.href = full_url;
 }
 

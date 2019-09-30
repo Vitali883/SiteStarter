@@ -29,7 +29,7 @@ function loadFromLocalStorage() {
         let curr_url = window.location.href
         let a = curr_url.split('/')
         let lang = a[3];
-        if (lang != "en" && lang != "ru" && lang != "et") {
+        if (lang !== "en" && lang !== "ru" && lang !== "et") {
             lang = "en"
         }
         
