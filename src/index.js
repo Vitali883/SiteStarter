@@ -26,21 +26,24 @@ function saveToLocalStorage(state) {
 function loadFromLocalStorage() {
     console.log("Load");
     try {
-        let serializedState = localStorage.getItem('state')
-        if (serializedState === null) 
-            return undefined
-        
         let curr_url = window.location.href
         let a = curr_url.split('/')
         let lang = a[3];
-        let temp = JSON.parse(serializedState);
-
         if (lang != "en" && lang != "ru" && lang != "et") {
             lang = "en"
         }
 
-        temp.userLanguage = lang;   
-
+        let serializedState = localStorage.getItem('state')
+        if (serializedState === null){
+            const stateConfig = { userLanguage: lang }
+            const state = JSON.stringify(stateConfig);
+            localStorage.setItem('state', state)
+            window.location.reload()
+            return undefined
+        }
+        
+        let temp = JSON.parse(serializedState); 
+        temp.userLanguage = lang;
         return temp
     } catch (e) {
         console.log(e)
