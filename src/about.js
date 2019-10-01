@@ -3,11 +3,11 @@ import {FormattedMessage} from 'react-intl'
 
 function About() {
     return (
-        <div>
+        <main>
             <h1>
                 <FormattedMessage id="nav.about" defaultMessage="About"/>
             </h1>
-        </div>
+        </main>
     );
 }
 

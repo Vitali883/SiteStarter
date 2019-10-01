@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
 import { choosenLanguage } from '../actions';
@@ -31,23 +32,23 @@ function Navbar() {
     return(
         <nav className='Navbar'>
             <div>
-                <a href={`/${currLang}/home`}>
+                <Link to={`/${currLang}/home`}>
                     <FormattedMessage
                         id='nav.home'
                         defaultMessage='Home'
                     />
-                </a>
-                <a href={`/${currLang}/about`}>
+                </Link>
+                <Link to={`/${currLang}/about`}>
                     <FormattedMessage
                         id='nav.about'
                         defaultMessage='About'
                     />
-                </a>
+                </Link>
             </div>
             <div id='languages__container'>
-                <button onMouseUp={() => reloadPage('ru')} onClick={() => dispatch(choosenLanguage('ru'))}>RU</button>
-                <button onMouseUp={() => reloadPage('en')} onClick={() => dispatch(choosenLanguage('en'))}>EN</button>
-                <button onMouseUp={() => reloadPage('et')} onClick={() => dispatch(choosenLanguage('et'))}>ET</button>
+                <button onClick={() => dispatch(choosenLanguage('ru'))}>RU</button>
+                <button onClick={() => dispatch(choosenLanguage('en'))}>EN</button>
+                <button onClick={() => dispatch(choosenLanguage('et'))}>ET</button>
             </div>
         </nav>
     )
