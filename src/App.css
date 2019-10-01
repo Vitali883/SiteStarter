@@ -29,7 +29,7 @@ button:focus {outline:0;}
   cursor: pointer;
 }
 
-.UserMenu__profile{
+.UserMenu__profile {
   display: flex;
   align-items: center;
   cursor: pointer;

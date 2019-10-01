@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './login';
+import Login from '../login';
 import {useSelector} from 'react-redux';
 
 function openMenu() {

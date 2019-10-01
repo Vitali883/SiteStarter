@@ -1,23 +1,24 @@
-export const login = () => {
+
+export function login() {
     return {
         type: 'SIGN_IN'
-    }
+    };
 }
 
-export const SignUpPopView = view => {
+export function SignUpPopView(view) {
     return {
         type: view
-    }
+    };
 }
 
-export const lognFormPageView = view => {
+export function lognFormPageView(view) {
     return {
         type: view
-    }
+    };
 }
 
-export const choosen_language = ln => {
+export function choosenLanguage(ln) {
     return {
         type: ln,
-    }
+    };
 }

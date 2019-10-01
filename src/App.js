@@ -1,22 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router';
+import { IntlProvider } from 'react-intl';
+
 import './App.css';
 
-import Header from "./header"
-import Footer from "./footer"
-import SideMenu from "./sideMenu"
-import Content from "./content.js"
-import { IntlProvider } from "react-intl"
-import { useSelector } from 'react-redux';
-import messages from './messages'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import SideMenu from './components/sideMenu';
+import Content from './content';
+
+import messages from './messages';
+
 
 function App() {
-    const curr_lang = useSelector(state => state.userLanguage);
+    const currLang = useSelector(state => state.userLanguage);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        console.log(location);
+    }, [location]);
+
     return (
         <IntlProvider
-            locale={curr_lang}
-            messages={messages[curr_lang]}
+            locale={currLang}
+            messages={messages[currLang]}
         >
-            <div className="main_container">
+            <div className='main_container'>
                 <Header/>
                 <SideMenu/>
                 <Content/>

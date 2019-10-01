@@ -1,18 +1,20 @@
 import React from 'react';
-import UserMenu from "./userMenu"
-import Logo from "./logo"
-import Navbar from './nav'
+
+import Logo from './Logo';
+import Navbar from './Navbar';
+import UserMenu from './userMenu';
+
 
 class Header extends React.Component {
     render() {
         return (
             <header>
-                <Logo/>
+                <Logo />
                 <Navbar />
-                <UserMenu/>
+                <UserMenu />
             </header>
         )
     }
 }
 
-export default Header
+export default Header;
