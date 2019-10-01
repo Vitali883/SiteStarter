@@ -1,9 +1,12 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl'
 
 function About() {
     return (
         <div>
-            <h1>About page</h1>
+            <h1>
+                <FormattedMessage id="nav.about" defaultMessage="About"/>
+            </h1>
         </div>
     );
 }

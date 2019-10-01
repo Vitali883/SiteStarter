@@ -10,7 +10,6 @@ import {Provider} from 'react-redux';
 
 
 function saveToLocalStorage(state) {
-    console.log("Save");
     try {
         const stateConfig = {
             userLanguage: state.userLanguage,
@@ -24,18 +23,19 @@ function saveToLocalStorage(state) {
 }
 
 function loadFromLocalStorage() {
-    console.log("Load");
     try {
         let curr_url = window.location.href
-        let a = curr_url.split('/')
-        let lang = a[3];
+        let splited_url = curr_url.split('/')
+        let lang = splited_url[3];
+
         if (lang !== "en" && lang !== "ru" && lang !== "et") {
             lang = "en"
         }
         
         let serializedState = localStorage.getItem('state')
+        
         if (serializedState === null){
-            const stateConfig = { userLanguage: lang }
+            const stateConfig = { userLanguage: lang, isLogged: false }
             const state = JSON.stringify(stateConfig);
             localStorage.setItem('state', state)
             window.location.reload()
