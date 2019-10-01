@@ -1,14 +1,14 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl'
 
-function Home() {
+function About() {
     return (
         <main>
             <h1>
-                <FormattedMessage id="nav.home" defaultMessage="Home"/>
+                <FormattedMessage id='nav.about' defaultMessage='About'/>
             </h1>
         </main>
     );
 }
 
-export default Home;
+export default About;

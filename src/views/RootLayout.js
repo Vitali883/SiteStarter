@@ -1,8 +1,10 @@
 import React from 'react';
 
+import './RootLayout.css';
+
 import Header from './../components/Header';
 import Footer from './../components/Footer';
-import SideMenu from './../components/sideMenu';
+import SideMenu from '../components/SideMenu';
 
 import rootRoutes from './../routes/root';
 

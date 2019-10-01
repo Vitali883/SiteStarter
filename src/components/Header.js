@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from './Logo';
 import Navbar from './Navbar';
-import UserMenu from './userMenu';
+import UserMenu from './UserMenu';
 
 
 class Header extends React.Component {

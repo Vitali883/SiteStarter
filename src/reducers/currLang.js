@@ -1,4 +1,4 @@
-const curr_langReducer = (language = 'en', action) => {
+const currLangReducer = (language = 'en', action) => {
     switch(action.type) {
         case "en":
             return "en";
@@ -11,4 +11,4 @@ const curr_langReducer = (language = 'en', action) => {
     }
 }
 
-export default curr_langReducer;
+export default currLangReducer;

@@ -1,14 +1,17 @@
+import { combineReducers } from 'redux'
+
 import loggedReducer from './isLogged'
 import signUpReducer from './signUp'
 import isLogginViewPageReducer from './loginFormView'
-import curr_langReducer from './curr_lang'
-import { combineReducers } from 'redux'
+
+import currLangReducer from './currLang'
+
 
 const allReducer = combineReducers({
     isLogged: loggedReducer,
     showSignUpPop: signUpReducer,
     isLogginViewPage: isLogginViewPageReducer,
-    userLanguage: curr_langReducer
-})
+    userLanguage: currLangReducer
+});
 
 export default allReducer;
