@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FormattedMessage } from 'react-intl';
 
 function Popup(props) {
     const { header, children, onClose } = props;
@@ -15,6 +15,12 @@ function Popup(props) {
                 </div>
                 <div id='popup__inner__content'>
                     {children}
+                </div>
+                <div id='popup__inner__footer'>
+                    <button>
+                        <i className='fa fa-user fa-2x' aria-hidden='true'></i>
+                        <FormattedMessage id='signin.create_account' defaultMessage='Create account'/>
+                    </button>
                 </div>
             </div>
         </div>
