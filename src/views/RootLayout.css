@@ -44,7 +44,7 @@ button:focus {outline:0;}
   border-radius: 100px;
 }
 
-#userMneu__dropdown__circle {
+#userMenu__dropdown__circle {
   width: 15px;
   height: 15px;
   border-radius: 25px;
@@ -92,7 +92,7 @@ button:focus {outline:0;}
   display: inline-block;
 }
 
-.userMneu__dropdown__content {
+.userMenu__dropdown__content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -102,7 +102,7 @@ button:focus {outline:0;}
   z-index: 1;
 }
 
-.userMneu__dropdown__content a {
+.userMenu__dropdown__content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;

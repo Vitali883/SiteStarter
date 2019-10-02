@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
         let handlePassword = this.state.password;
 
         const data = {
-            'isikukood' : handleLogin,
+            'email' : handleLogin,
             'password' : handlePassword
         };
 
@@ -100,4 +100,5 @@ class LoginForm extends React.Component {
         );
     }
 }
+
 export default LoginForm;
