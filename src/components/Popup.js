@@ -13,7 +13,7 @@ function Popup(props) {
                     </h1>
                     <button onClick={() => onClose()}>X</button>
                 </div>
-                <div id='popup__inner_content'>
+                <div id='popup__inner__content'>
                     {children}
                 </div>
             </div>

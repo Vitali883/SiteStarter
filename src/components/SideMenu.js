@@ -3,13 +3,13 @@ import {useSelector} from 'react-redux';
 import {FormattedMessage} from 'react-intl'
 
 window.addEventListener('click', function (event) {
-    if (event.target.className === 'toggle-btn') {
+    if (event.target.className === 'toggleBtn') {
         document
             .getElementById('sideMenu')
             .classList
             .toggle('active');
     }
-    if (event.target.className === 'Sign_in_btn') {
+    if (event.target.className === 'signInBtn') {
         document
             .getElementById('sideMenu')
             .classList
