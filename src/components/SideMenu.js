@@ -5,13 +5,13 @@ import {FormattedMessage} from 'react-intl'
 window.addEventListener('click', function (event) {
     if (event.target.className === 'toggle-btn') {
         document
-            .getElementById('SideMenu')
+            .getElementById('sideMenu')
             .classList
             .toggle('active');
     }
     if (event.target.className === 'Sign_in_btn') {
         document
-            .getElementById('SideMenu')
+            .getElementById('sideMenu')
             .classList
             .remove('active');
     }
@@ -21,7 +21,7 @@ function SideMenu() {
     const currLang = useSelector(state => state.userLanguage);
 
     return (
-        <div id='SideMenu'>
+        <div id='sideMenu'>
             <ul>
                 <li>
                     <i className='fa fa-bars' aria-hidden='true'></i>

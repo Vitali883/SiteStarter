@@ -6,14 +6,14 @@ function Popup(props) {
 
     return(
         <div className='popup'>
-            <div className='popup_inner'>
-                <div id='popUp_Header'>
+            <div className='popup__inner'>
+                <div id='popup__inner__header'>
                     <h1>
                         {header}
                     </h1>
                     <button onClick={() => onClose()}>X</button>
                 </div>
-                <div id='popUp_Content'>
+                <div id='popup__inner_content'>
                     {children}
                 </div>
             </div>

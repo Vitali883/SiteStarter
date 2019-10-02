@@ -6,14 +6,14 @@ import Login from './Login';
 
 function openMenu() {
     document
-        .getElementById('myDropdown')
+        .getElementById('userMenu__dropdown__myDropdown')
         .classList
         .toggle('show');
 }
 
 function openNotifications() {
     document
-        .getElementById('myNotifDropdown')
+        .getElementById('userMenu__dropdown__myNotif')
         .classList
         .toggle('show');
 }
@@ -21,18 +21,14 @@ function openNotifications() {
 window
     .addEventListener('click', function (event) {
         if (
-            !event.target.matches('.dropbtn') && 
-            !event.target.matches('.dropdown') && 
-            !event.target.matches('.UserMenu__profile_img') && 
-            !event.target.matches('.UserMenu__profile') && 
-            !event.target.matches('.UserMenu') &&
-            !event.target.matches('.dropbtn2') && 
-            !event.target.matches('.dropdown') && 
-            !event.target.matches('.fa') && 
-            !event.target.matches('.UserMenu')
+            !event.target.matches('.userMenu__dropdown__button') && 
+            !event.target.matches('.userMenu__dropdown') && 
+            !event.target.matches('.userMenu__profile') && 
+            !event.target.matches('.userMenu') &&
+            !event.target.matches('.fa')
             ) 
         {
-            var dropdowns = document.getElementsByClassName('dropdown-content');
+            var dropdowns = document.getElementsByClassName('userMenu__dropdown__content');
             var i;
 
             for (i = 0; i < dropdowns.length; i++) {
@@ -56,34 +52,33 @@ function UserMenu() {
     }
 
     return (
-        <div className='UserMenu'>
-            <i id='UserMenu__Bell' class='fa fa-bell fa-2x' aria-hidden='true' onMouseDown={() => openNotifications()}>
-                <div class='dropdown'>
-                    <div class='dropbtn2' id='circle'>2</div>
+        <div className='userMenu'>
+            <i id='userMenu__bell' class='fa fa-bell fa-2x' aria-hidden='true' onMouseDown={() => openNotifications()}>
+                <div class='userMenu__dropdown'>
+                    <div id='userMenu__dropdown__circle'>2</div>
 
-                    <div id='myNotifDropdown' class='dropdown-content'>
+                    <div id='userMenu__dropdown__myNotif' class='userMenu__dropdown__content'>
                         <a href='#profile'>Profile</a>
                         <a href='#about'>Edit profile</a>
                         <span></span>
-                        <a id='logout_btn' href='#login'>Logout</a>
+                        <a id='logoutBtn' href='#login'>Logout</a>
                     </div>
                 </div>
             </i>
 
-            <div onMouseDown={() => openMenu()} className='UserMenu__profile'>
+            <div onMouseDown={() => openMenu()} className='userMenu__profile'>
                 <img
-                    class='UserMenu__profile_img'
                     alt='user_img'
                     src='https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg'
                 />
-                <div class='dropdown'>
-                    <button class='dropbtn'>Maria Zvaginceva</button>
+                <div class='userMenu__dropdown'>
+                    <button class='userMenu__dropdown__button'>Maria Zvaginceva</button>
 
-                    <div id='myDropdown' class='dropdown-content'>
+                    <div id='userMenu__dropdown__myDropdown' class='userMenu__dropdown__content'>
                         <a href='#profile'>Profile</a>
                         <a href='#about'>Edit profile</a>
                         <span></span>
-                        <a id='logout_btn' href='#login'>Logout</a>
+                        <a id='logoutBtn' href='#login'>Logout</a>
                     </div>
                 </div>
             </div>

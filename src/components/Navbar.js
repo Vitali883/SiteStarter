@@ -11,7 +11,7 @@ function Navbar() {
     const dispatch = useDispatch();
 
     return(
-        <nav className='Navbar'>
+        <nav className='navbar'>
             <div>
                 <Link to={`/${currLang}`}>
                     <FormattedMessage
@@ -26,7 +26,7 @@ function Navbar() {
                     />
                 </Link>
             </div>
-            <div id='languages__container'>
+            <div id='navbar__languageContainer'>
                 <Link to='/ru' onClick={() => dispatch(choosenLanguage('ru'))}>RU</Link>
                 <Link to='/en' onClick={() => dispatch(choosenLanguage('en'))}>EN</Link>
                 <Link to='/et' onClick={() => dispatch(choosenLanguage('et'))}>ET</Link>

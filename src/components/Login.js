@@ -20,7 +20,7 @@ function Login() {
     }
 
     return (
-        <button onClick={() => { setUserMenuState({ isVisiblePopup: true }); }} className='Sign_in_btn'>
+        <button onClick={() => { setUserMenuState({ isVisiblePopup: true }); }} className='signInBtn'>
             <i className='fa fa-user fa-2x' aria-hidden='true'></i>
             <FormattedMessage
                 id='nav.signin'
