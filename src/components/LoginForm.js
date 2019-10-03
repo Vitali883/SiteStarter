@@ -44,6 +44,7 @@ class LoginForm extends React.Component {
                 alert('Logged in')
             }
         });
+        
     }
 
     handleChangeState(event) {

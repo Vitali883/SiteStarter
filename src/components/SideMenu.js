@@ -2,26 +2,18 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {FormattedMessage} from 'react-intl'
 
-window.addEventListener('click', function (event) {
-    if (event.target.className === 'toggleBtn') {
-        document
-            .getElementById('sideMenu')
-            .classList
-            .toggle('active');
-    }
-    if (event.target.className === 'signInBtn') {
-        document
-            .getElementById('sideMenu')
-            .classList
-            .remove('active');
-    }
-});
 
-function SideMenu() {
+function SideMenu(props) {
+    let { isVisible } = props;
     const currLang = useSelector(state => state.userLanguage);
 
+    const siteMenuClasses = [];
+    if (isVisible) {
+        siteMenuClasses.push('active');
+    }
+
     return (
-        <div id='sideMenu'>
+        <div id='sideMenu' class={siteMenuClasses.join(' ')}>
             <ul>
                 <li>
                     <i className='fa fa-bars' aria-hidden='true'></i>

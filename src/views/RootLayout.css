@@ -263,7 +263,13 @@ Header .toggleBtn {
   flex-direction: column;
   justify-content: center;
   width: 53px;
-  margin: 0px 40px 0px 20px;
+}
+
+#toggleBtnLogo__toggleBtn{
+  cursor: pointer;
+  border:none;
+  background: white;
+  margin: 0px 35px 0px 13px;
 }
 
 Header .toggleBtn span {
