@@ -4,42 +4,39 @@ import { useSelector } from 'react-redux';
 import Login from './Login';
 
 
-function openMenu() {
+
+function openDropdown(id) {
     document
-        .getElementById('userMenu__dropdown__myDropdown')
+        .getElementById(id)
         .classList
         .toggle('show');
-}
-
-function openNotifications() {
     document
-        .getElementById('userMenu__dropdown__myNotif')
+        .getElementById('userMenu__layout')
         .classList
         .toggle('show');
 }
 
 window
     .addEventListener('click', function (event) {
-        if (
-            !event.target.matches('.userMenu__dropdown__button') && 
-            !event.target.matches('.userMenu__dropdown') && 
-            !event.target.matches('.userMenu__profile') && 
-            !event.target.matches('.userMenu') &&
-            !event.target.matches('.fa')
-            ) 
-        {
-            var dropdowns = document.getElementsByClassName('userMenu__dropdown__content');
-            var i;
+        if(event.target.matches('#userMenu__layout')){
+           
+            let dropdowns = document.getElementsByClassName('userMenu__dropdown__content');
+            let i;
 
             for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
+                let openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains('show')) {
                     openDropdown
                         .classList
                         .remove('show');
+
+                     document
+                        .getElementById('userMenu__layout')
+                        .classList
+                        .remove('show');
                 }
             }
-        }
+        }        
     });
 
 function UserMenu() {
@@ -53,11 +50,12 @@ function UserMenu() {
 
     return (
         <div className='userMenu'>
-            <i id='userMenu__bell' class='fa fa-bell fa-2x' aria-hidden='true' onMouseDown={() => openNotifications()}>
-                <div class='userMenu__dropdown'>
+            <div id="userMenu__layout"></div>
+            <i id='userMenu__bell' className='fa fa-bell fa-2x' aria-hidden='true' onMouseDown={() => openDropdown('userMenu__dropdown__myNotif')}>
+                <div className='userMenu__dropdown'>
                     <div id='userMenu__dropdown__circle'>2</div>
 
-                    <div id='userMenu__dropdown__myNotif' class='userMenu__dropdown__content'>
+                    <div id='userMenu__dropdown__myNotif' className='userMenu__dropdown__content'>
                         <a href='#profile'>Profile</a>
                         <a href='#about'>Edit profile</a>
                         <span></span>
@@ -66,15 +64,15 @@ function UserMenu() {
                 </div>
             </i>
 
-            <div onMouseDown={() => openMenu()} className='userMenu__profile'>
+            <div onMouseDown={() => openDropdown('userMenu__dropdown__myDropdown')} className='userMenu__profile'>
                 <img
                     alt='user_img'
                     src='https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg'
                 />
-                <div class='userMenu__dropdown'>
-                    <button class='userMenu__dropdown__button'>Maria Zvaginceva</button>
+                <div className='userMenu__dropdown'>
+                    <button className='userMenu__dropdown__button'>Maria Zvaginceva</button>
 
-                    <div id='userMenu__dropdown__myDropdown' class='userMenu__dropdown__content'>
+                    <div id='userMenu__dropdown__myDropdown' className='userMenu__dropdown__content'>
                         <a href='#profile'>Profile</a>
                         <a href='#about'>Edit profile</a>
                         <span></span>
