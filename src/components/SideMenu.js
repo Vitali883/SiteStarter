@@ -12,8 +12,8 @@ function SideMenu(props) {
         siteMenuClasses.push('active');
     }
 
-    return (
-        <div id='sideMenu' class={siteMenuClasses.join(' ')}>
+    return (    
+        <div id='sideMenu' className={siteMenuClasses.join(' ')}>
             <ul>
                 <li>
                     <i className='fa fa-bars' aria-hidden='true'></i>

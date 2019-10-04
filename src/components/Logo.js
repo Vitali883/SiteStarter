@@ -25,10 +25,8 @@ function Logo() {
                     src='https://cu4.uicdn.net/80e/b03a5dcb0c9c9c6d818b94d5d2c61/webapp/25716-logo-generator.svg'
                 />
             </Link>
-            { sideMenuState.isVisibleMenu
-                ? <SideMenu isVisible={true} />
-                : <SideMenu isVisible={false} />
-            }
+
+            <SideMenu isVisible={sideMenuState.isVisibleMenu} />
                         
         </div>
     )

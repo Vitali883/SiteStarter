@@ -111,10 +111,6 @@ button:focus {outline:0;}
 
 .userMenu__dropdown a:hover {background-color: #ddd;}
 
-.show {
-  display: block !important; 
-}
-
 #logoutBtn {
   color:rgb(216, 13, 13);
 }
@@ -143,7 +139,7 @@ button:focus {outline:0;}
   background-color: rgb(0, 162, 255);
   border-color: rgb(0, 162, 255);
 }
-#userMenu__layout{
+.userMenu__layout{
   display: none;
   position: absolute;
   top: 0;
@@ -153,6 +149,7 @@ button:focus {outline:0;}
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
+.show {display: block;}
 /* UserMenu end */
 
 /* footer start */
@@ -189,7 +186,7 @@ main {
 /* SideMenu start */
 #sideMenu {
   width: 0px;
-  background: rgba(47, 46, 46, 0.98);
+  background: rgba(47, 46, 46, 0.9);
   grid-area: sidebar;
   transition: all 250ms linear;
   box-shadow: 4px 1px 4px -1px rgba(0,0,0,0.30);

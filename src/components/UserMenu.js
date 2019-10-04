@@ -1,46 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import Login from './Login';
 
 
-
-function openDropdown(id) {
-    document
-        .getElementById(id)
-        .classList
-        .toggle('show');
-    document
-        .getElementById('userMenu__layout')
-        .classList
-        .toggle('show');
-}
-
-window
-    .addEventListener('click', function (event) {
-        if(event.target.matches('#userMenu__layout')){
-           
-            let dropdowns = document.getElementsByClassName('userMenu__dropdown__content');
-            let i;
-
-            for (i = 0; i < dropdowns.length; i++) {
-                let openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown
-                        .classList
-                        .remove('show');
-
-                     document
-                        .getElementById('userMenu__layout')
-                        .classList
-                        .remove('show');
-                }
-            }
-        }        
-    });
-
 function UserMenu() {
     const isLogged = useSelector(state => state.isLogged);
+    
+    const [dropdownState, setDropdown] = useState({
+        isVisibleNotificationDropdown: false,
+        isVisibleProfileDropdown: false,
+        isVisibleLayout: false
+    });
+
+    const notifDropdownClasses = ['userMenu__dropdown__content'];
+    const profileDropdownClasses = ['userMenu__dropdown__content'];
+    const layoutClasses = ['userMenu__layout'];
+
+    if (dropdownState.isVisibleNotificationDropdown) {
+        notifDropdownClasses.push('show');
+        layoutClasses.push('show');
+    }
+
+    if (dropdownState.isVisibleProfileDropdown) {
+        profileDropdownClasses.push('show');
+        layoutClasses.push('show');
+    }  
 
     if (!isLogged) {
         return (
@@ -50,12 +35,12 @@ function UserMenu() {
 
     return (
         <div className='userMenu'>
-            <div id="userMenu__layout"></div>
-            <i id='userMenu__bell' className='fa fa-bell fa-2x' aria-hidden='true' onMouseDown={() => openDropdown('userMenu__dropdown__myNotif')}>
+            <div className={layoutClasses.join(' ')} onClick={() => setDropdown({ isVisibleLayout: false }) } ></div>
+            <i id='userMenu__bell' className='fa fa-bell fa-2x' aria-hidden='true' onClick={() => setDropdown({ isVisibleNotificationDropdown: !dropdownState.isVisibleNotificationDropdown }) }>
                 <div className='userMenu__dropdown'>
                     <div id='userMenu__dropdown__circle'>2</div>
 
-                    <div id='userMenu__dropdown__myNotif' className='userMenu__dropdown__content'>
+                    <div id='userMenu__dropdown__myNotif' className={notifDropdownClasses.join(' ')}>
                         <a href='#profile'>Profile</a>
                         <a href='#about'>Edit profile</a>
                         <span></span>
@@ -64,7 +49,7 @@ function UserMenu() {
                 </div>
             </i>
 
-            <div onMouseDown={() => openDropdown('userMenu__dropdown__myDropdown')} className='userMenu__profile'>
+            <div className='userMenu__profile' onClick={() => setDropdown({ isVisibleProfileDropdown: !dropdownState.isVisibleProfileDropdown }) } >
                 <img
                     alt='user_img'
                     src='https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg'
@@ -72,7 +57,7 @@ function UserMenu() {
                 <div className='userMenu__dropdown'>
                     <button className='userMenu__dropdown__button'>Maria Zvaginceva</button>
 
-                    <div id='userMenu__dropdown__myDropdown' className='userMenu__dropdown__content'>
+                    <div id='userMenu__dropdown__myDropdown' className={profileDropdownClasses.join(' ')}>
                         <a href='#profile'>Profile</a>
                         <a href='#about'>Edit profile</a>
                         <span></span>
