@@ -32,7 +32,7 @@ function Navbar() {
                 <Link to='/et' onClick={() => dispatch(choosenLanguage('et'))}>ET</Link>
             </div>
         </nav>
-    )
+    );
 }
 
 export default Navbar;

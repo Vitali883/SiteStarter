@@ -6,6 +6,6 @@ import { RootLayout } from '../views/RootLayout';
 
 export default (
     <Router>
-        <Route path='/' component={RootLayout} />                 
+        <Route path='/' component={RootLayout} />
     </Router>
 );
