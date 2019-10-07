@@ -33,7 +33,7 @@ function UserMenu() {
             isVisibleNotificationDropdown: notifBoolean,
             isVisibleProfileDropdown: profileBoolean
         });
-    }
+    }    
 
     if (!isLogged) {
         return (

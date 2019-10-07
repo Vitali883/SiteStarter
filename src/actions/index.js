@@ -19,6 +19,6 @@ export function lognFormPageView(view) {
 
 export function choosenLanguage(ln) {
     return {
-        type: ln,
+        type: ln
     };
 }
