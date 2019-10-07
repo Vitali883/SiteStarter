@@ -12,6 +12,7 @@ function UserMenu() {
         isVisibleProfileDropdown: false,
         isVisibleLayout: false
     });
+    console.log(dropdownState)
 
     const notifDropdownClasses = ['userMenu__dropdown__content'];
     const profileDropdownClasses = ['userMenu__dropdown__content'];
@@ -35,8 +36,8 @@ function UserMenu() {
 
     return (
         <div className='userMenu'>
-            <div className={layoutClasses.join(' ')} onClick={() => setDropdown({ isVisibleLayout: false }) } ></div>
-            <i id='userMenu__bell' className='fa fa-bell fa-2x' aria-hidden='true' onClick={() => setDropdown({ isVisibleNotificationDropdown: !dropdownState.isVisibleNotificationDropdown }) }>
+            <div className={layoutClasses.join(' ')} onClick={() => setDropdown({ isVisibleLayout: false, isVisibleProfileDropdown: false, isVisibleNotificationDropdown: false  }) } ></div>
+            <i id='userMenu__bell' className='fa fa-bell fa-2x' aria-hidden='true' onClick={() => setDropdown({ isVisibleNotificationDropdown: !dropdownState.isVisibleNotificationDropdown, isVisibleLayout: !dropdownState.isVisibleLayout, isVisibleProfileDropdown: false }) }>
                 <div className='userMenu__dropdown'>
                     <div id='userMenu__dropdown__circle'>2</div>
 
@@ -49,7 +50,7 @@ function UserMenu() {
                 </div>
             </i>
 
-            <div className='userMenu__profile' onClick={() => setDropdown({ isVisibleProfileDropdown: !dropdownState.isVisibleProfileDropdown }) } >
+            <div className='userMenu__profile' onClick={() => setDropdown({ isVisibleProfileDropdown: !dropdownState.isVisibleProfileDropdown, isVisibleLayout: !dropdownState.isVisibleLayout, isVisibleNotificationDropdown: false }) } >
                 <img
                     alt='user_img'
                     src='https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg'
