@@ -6,9 +6,12 @@ import { FormattedMessage } from 'react-intl';
 import { choosenLanguage } from '../actions';
 
 
-function Navbar() {
+function Navbar(props) {
     const currLang = useSelector(state => state.userLanguage);
     const dispatch = useDispatch();
+
+    let location = props.location.substring(4);
+    console.log(location);
 
     return(
         <nav className='navbar'>
@@ -27,9 +30,9 @@ function Navbar() {
                 </Link>
             </div>
             <div id='navbar__languageContainer'>
-                <Link to='/ru' onClick={() => dispatch(choosenLanguage('ru'))}>RU</Link>
-                <Link to='/en' onClick={() => dispatch(choosenLanguage('en'))}>EN</Link>
-                <Link to='/et' onClick={() => dispatch(choosenLanguage('et'))}>ET</Link>
+                <Link to={`/ru/${location}`} onClick={() => dispatch(choosenLanguage('ru'))}>RU</Link>
+                <Link to={`/en/${location}`} onClick={() => dispatch(choosenLanguage('en'))}>EN</Link>
+                <Link to={`/et/${location}`} onClick={() => dispatch(choosenLanguage('et'))}>ET</Link>
             </div>
         </nav>
     );

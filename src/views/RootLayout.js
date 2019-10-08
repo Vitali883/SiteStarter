@@ -8,10 +8,10 @@ import Footer from './../components/Footer';
 import rootRoutes from './../routes/root';
 
 
-export function RootLayout() {
+export function RootLayout(props) {
     return (
         <div className='main_container'>
-            <Header />
+            <Header loaction={props.location.pathname}/>
             {rootRoutes}
             <Footer />
         </div>

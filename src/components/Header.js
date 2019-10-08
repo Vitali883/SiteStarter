@@ -6,12 +6,11 @@ import UserMenu from './UserMenu';
 
 
 class Header extends React.Component {
-
-    render() {
+    render(props) {
         return (
             <header>
                 <Logo />
-                <Navbar />
+                <Navbar location={this.props.loaction}/>
                 <UserMenu />
             </header>
         )
