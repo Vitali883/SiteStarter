@@ -5,6 +5,7 @@ import Logo from './Logo';
 import Navbar from './Navbar';
 import UserMenu from './UserMenu';
 import SideMenu from './SideMenu';
+import LoginBtn from './LoginBtn';
 
 
 function Header(props) {
@@ -24,7 +25,8 @@ function Header(props) {
             <SideMenu isVisible={sideMenuState.isVisibleMenu} />
             <Logo />
             <Navbar location={props.location} />
-            <UserMenu />
+            {/* <UserMenu /> */}
+            <LoginBtn />
         </header>
     )
 }
