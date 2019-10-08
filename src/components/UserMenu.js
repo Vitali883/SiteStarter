@@ -6,14 +6,14 @@ import Login from './LoginBtn';
 
 function UserMenu() {
     const isLogged = useSelector(state => state.isLogged);
-    
+
     const [dropdownState, setDropdown] = useState({
         isVisibleNotificationDropdown: false,
         isVisibleProfileDropdown: false,
         isVisibleLayout: false
     });
 
-    const [setUserMenu] = useState({        
+    const [setUserMenu] = useState({
         isVisibleLayout: false
     });
 
@@ -36,11 +36,11 @@ function UserMenu() {
             isVisibleNotificationDropdown: notifBoolean,
             isVisibleProfileDropdown: profileBoolean
         });
-        
+
         setUserMenu({
             isVisibleLayout: layoutBoolean
         });
-    }    
+    }
 
     if (!isLogged) {
         return (

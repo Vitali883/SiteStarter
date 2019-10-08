@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
         return fetch(`${siteConfig.laravelApiUrl}/api/login`,{
             headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json',                
+            'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
             method : "POST"

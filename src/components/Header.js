@@ -6,7 +6,7 @@ import UserMenu from './UserMenu';
 
 
 class Header extends React.Component {
-    render(props) {
+    render() {
         return (
             <header>
                 <Logo />

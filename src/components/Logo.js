@@ -29,7 +29,6 @@ function Logo() {
             </Link>
 
             <SideMenu isVisible={sideMenuState.isVisibleMenu} />
-                        
         </div>
     )
 }

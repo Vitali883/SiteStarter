@@ -8,7 +8,7 @@ function Registration() {
             <div>
                 <h2>
                     <FormattedMessage id='reg.reg_form' defaultMessage='Sign up'/>
-                </h2>                    
+                </h2>
                 <label>
                     <b>
                         <FormattedMessage
@@ -16,9 +16,9 @@ function Registration() {
                             defaultMessage='Firstname, Lastname'/>
                     </b>
                 </label>
-                
+
                 <br/>
-                
+
                 <input
                     type='text'
                     id='user-name'

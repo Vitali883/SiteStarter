@@ -13,7 +13,7 @@ function SideMenu(props) {
         siteMenuClasses.push('active');
     }
 
-    return (    
+    return (
         <div id='sideMenu' className={siteMenuClasses.join(' ')}>
             <ul>
                 <li>
@@ -23,7 +23,7 @@ function SideMenu(props) {
                     </Link>
                 </li>
                 <li>
-                    <i className='fa fa-users' aria-hidden='true'></i>                    
+                    <i className='fa fa-users' aria-hidden='true'></i>
                     <Link to={`/${currLang}/about`}>
                         <FormattedMessage id='nav.about' defaultMessage='About'/>
                     </Link>
