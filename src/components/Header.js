@@ -10,7 +10,7 @@ class Header extends React.Component {
         return (
             <header>
                 <Logo />
-                <Navbar location={this.props.loaction}/>
+                <Navbar location={this.props.location}/>
                 <UserMenu />
             </header>
         )

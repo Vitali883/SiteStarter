@@ -11,7 +11,7 @@ import rootRoutes from './../routes/root';
 export function RootLayout(props) {
     return (
         <div className='main_container'>
-            <Header loaction={props.location.pathname}/>
+            <Header location={props.location.pathname}/>
             {rootRoutes}
             <Footer />
         </div>

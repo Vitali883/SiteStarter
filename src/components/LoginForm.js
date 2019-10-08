@@ -8,7 +8,7 @@ class LoginForm extends React.Component {
         super();
         this.state = {
             login: "",
-            password: "",
+            password: ""
         }
 
         this.handleChangeState = this.handleChangeState.bind(this);
@@ -32,7 +32,7 @@ class LoginForm extends React.Component {
             'Content-Type': 'application/json',                
             },
             body: JSON.stringify(data),
-            method : "POST",
+            method : "POST"
         })
         .then(r => r.json())
         .then(data => {
@@ -42,7 +42,6 @@ class LoginForm extends React.Component {
                 alert('Logged in')
             }
         });
-        
     }
 
     handleChangeState(event) {
