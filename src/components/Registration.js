@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 
-function Registration () {
+function Registration() {
     return (
         <form className="registerForm">
             <div>

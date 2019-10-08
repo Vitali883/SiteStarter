@@ -13,7 +13,7 @@ function Navbar(props) {
     let location = props.location.substring(4);
     console.log(location);
 
-    return(
+    return (
         <nav className='navbar'>
             <div>
                 <Link to={`/${currLang}`}>

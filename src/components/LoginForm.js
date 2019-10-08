@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+
 import siteConfig from '../site-config';
 
 
@@ -36,18 +37,19 @@ class LoginForm extends React.Component {
         })
         .then(r => r.json())
         .then(data => {
-            if(data.data[1] === 'fail'){
-                alert('Fail')
+            if(data.data[1] === 'fail') {
+                alert('Fail');
             }else{
-                alert('Logged in')
+                alert('Logged in');
             }
         });
     }
 
     handleChangeState(event) {
         const {name, value} = event.target;
-        this.setState({ [name]: value })
+        this.setState({ [name]: value });
     }
+
     render() {
         return(
             <form onSubmit={this.handleSubmit} className="loginForm">

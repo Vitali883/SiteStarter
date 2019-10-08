@@ -31,7 +31,6 @@ function Login() {
                 defaultMessage='Sign in'
             />
         </Link>
-       
     );
 }
 
