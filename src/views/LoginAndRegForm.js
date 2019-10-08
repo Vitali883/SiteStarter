@@ -57,7 +57,7 @@ class LoginAndRegForm extends React.Component {
 
     render() {    
         return (
-            <main>
+            <main class="loginAndRegisterPage">
                 <LoginForm />
                 <Registration />
             </main>

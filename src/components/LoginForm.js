@@ -4,7 +4,8 @@ import { FormattedMessage } from 'react-intl';
 
 function LoginForm() {
     return(
-        <form>
+        <form className="loginForm">
+            <h2>Login</h2>
             <label>
                 <b>
                     <FormattedMessage

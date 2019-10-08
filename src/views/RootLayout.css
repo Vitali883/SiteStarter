@@ -120,18 +120,19 @@ button:focus {outline:0;}
   background-color: white;
   border-color: rgb(0, 162, 255);
   border-radius: 4px;
-  margin: 13px;
+  margin: 15px;
   margin-right:20px;
   font-size: 17px;
   cursor: pointer;
   transition: all 200ms linear;
   white-space: nowrap;
+  padding: 4px;
 }
 
 .signInBtn i {
   margin-right: 6px;
   position: relative;
-  top: 1px;
+  top: 3px;
 }
 
 .signInBtn:hover {
@@ -351,7 +352,7 @@ Header .toggleBtn span {
 }
 /* Navbar end */
 
-/* Sign up start */
+/* Sign up start
 .popup {  
   position: fixed;  
   width: 100%;  
@@ -485,5 +486,19 @@ Header .toggleBtn span {
   background: rgb(214, 214, 214);
   color: black;
   transition: all 100ms linear;
-}
+} */
 /* Sign up end */
+
+.loginAndRegisterPage {
+  display: flex;
+  justify-content: center;
+}
+
+.loginForm {
+  padding-right: 20px;
+  border-style: none solid none none;
+}
+
+.registerForm {
+  padding-left: 20px;
+}
