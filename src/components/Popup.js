@@ -1,8 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
+
 
 function Popup(props) {
     const { header, children, onClose } = props;
+    const currLang = useSelector(state => state.userLanguage);
 
     return(
         <div className='popup'>
@@ -17,10 +21,15 @@ function Popup(props) {
                     {children}
                 </div>
                 <div id='popup__inner__footer'>
-                    <button>
-                        <i className='fa fa-user fa-2x' aria-hidden='true'></i>
-                        <FormattedMessage id='signin.create_account' defaultMessage='Create account'/>
-                    </button>
+                    <Link to={`/${currLang}/registration`}>
+                        <button onClick={() => onClose()}>
+                            <i className='fa fa-user fa-2x' aria-hidden='true'></i>
+                            <FormattedMessage
+                                id='signin.create_account'
+                                defaultMessage='Create account'
+                            />                        
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

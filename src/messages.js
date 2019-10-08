@@ -6,12 +6,8 @@ export default {
         'signin.email': 'Email',
         'signin.password': 'Password',
         'signin.login': 'Login',
-        'signin.create_account': 'Create account',
-        'reg.reg_form': 'Sign up',
-        'reg.firstname_lastname': 'Firstname, Lastname',
-        'reg.confirm_pass': 'Confirm password',
-        'reg.registration': 'Registration',
-        'reg.back_to_login': 'Back to sign in',
+        'signin.create_account': 'Create account',    
+        'reg.reg_form': 'Registration',
         'sidebar.settings': 'Settings',
     },
     ru: {
@@ -23,10 +19,6 @@ export default {
         'signin.login': 'Войти',
         'signin.create_account': 'Создать аккаунт',
         'reg.reg_form': 'Регистрация',
-        'reg.firstname_lastname': 'Имя, Фамилия',
-        'reg.confirm_pass': 'Подтвердите пароль',
-        'reg.registration': 'Зарегистрироваться',
-        'reg.back_to_login': 'Назад к входу',
         'sidebar.settings': 'Настройки',
     },
     et: {
@@ -37,11 +29,7 @@ export default {
         'signin.login': 'Logi sisse',
         'signin.password': 'Parool',
         'signin.create_account': 'Loo konto',
-        'reg.reg_form': 'Registreerimine',
-        'reg.firstname_lastname': 'Ees- ja perekonnanimi',
-        'reg.confirm_pass': 'Kinnitage parool',
-        'reg.registration': 'Registreeru',
-        'reg.back_to_login': 'Tagasi sissepääsu juurde',
+        'reg.reg_form': 'Registreerimine',        
         'sidebar.settings': 'Seaded',
     }
 }
