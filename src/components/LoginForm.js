@@ -1,9 +1,11 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import siteConfig from '../site-config';
 
+const currLang = useSelector(state => state.userLanguage);
 
 class LoginForm extends React.Component {
 
@@ -53,7 +55,11 @@ class LoginForm extends React.Component {
         this.setState({ [name]: value })
     }
 
-    render() {
+    render(props) {
+
+        const { onClose } = this.props;
+        
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -100,6 +106,8 @@ class LoginForm extends React.Component {
 
                     <button onClick={() => { this.props.onClick(); }}>close</button>
                 </form>
+
+
                 <div id='popup__inner__footer'>
                     <Link onClick={() => onClose()} to={`/${currLang}/registration`}>
                         <i className='fa fa-user fa-2x' aria-hidden='true'></i>
@@ -109,6 +117,8 @@ class LoginForm extends React.Component {
                         />
                     </Link>
                 </div>  
+
+                
             </div>
         );
     }

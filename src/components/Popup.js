@@ -1,9 +1,7 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 
 function Popup(props) {
     const {header, children, onClose} = props;
-    const currLang = useSelector(state => state.userLanguage);
 
     return (
         <div className='popup'>
