@@ -6,7 +6,7 @@ import Registration from '../components/Registration';
 
 function LoginAndRegForm() {
     return (
-        <main class="loginAndRegisterPage">
+        <main className="loginAndRegisterPage">
             <LoginForm />
             <Registration />
         </main>
