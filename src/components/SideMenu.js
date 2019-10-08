@@ -1,6 +1,7 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import {FormattedMessage} from 'react-intl'
+import { useSelector } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 
 function SideMenu(props) {
@@ -17,21 +18,21 @@ function SideMenu(props) {
             <ul>
                 <li>
                     <i className='fa fa-bars' aria-hidden='true'></i>
-                    <a href={`/${currLang}/home`}>
+                    <Link to={`/${currLang}/home`}>
                         <FormattedMessage id='nav.home' defaultMessage='Home'/>
-                    </a>
+                    </Link>                    
                 </li>
                 <li>
-                    <i className='fa fa-users' aria-hidden='true'></i>
-                    <a href={`/${currLang}/about`}>
+                    <i className='fa fa-users' aria-hidden='true'></i>                    
+                    <Link to={`/${currLang}/about`}>
                         <FormattedMessage id='nav.about' defaultMessage='About'/>
-                    </a>
+                    </Link> 
                 </li>
                 <li>
                     <i className='fa fa-cog' aria-hidden='true'></i>
-                    <a href={`/${currLang}/settings`}>
+                    <Link to={`/${currLang}/settings`}>
                         <FormattedMessage id='sidebar.settings' defaultMessage='Settings'/>
-                    </a>
+                    </Link>                   
                 </li>
             </ul>
         </div>
