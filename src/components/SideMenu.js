@@ -20,19 +20,19 @@ function SideMenu(props) {
                     <i className='fa fa-bars' aria-hidden='true'></i>
                     <Link to={`/${currLang}/home`}>
                         <FormattedMessage id='nav.home' defaultMessage='Home'/>
-                    </Link>                    
+                    </Link>
                 </li>
                 <li>
                     <i className='fa fa-users' aria-hidden='true'></i>                    
                     <Link to={`/${currLang}/about`}>
                         <FormattedMessage id='nav.about' defaultMessage='About'/>
-                    </Link> 
+                    </Link>
                 </li>
                 <li>
                     <i className='fa fa-cog' aria-hidden='true'></i>
                     <Link to={`/${currLang}/settings`}>
                         <FormattedMessage id='sidebar.settings' defaultMessage='Settings'/>
-                    </Link>                   
+                    </Link>
                 </li>
             </ul>
         </div>

@@ -13,6 +13,10 @@ function UserMenu() {
         isVisibleLayout: false
     });
 
+    const [userMenuState, setUserMenu] = useState({        
+        isVisibleLayout: false
+    });
+
     const notifDropdownClasses = ['userMenu__dropdown__content'];
     const profileDropdownClasses = ['userMenu__dropdown__content'];
     const layoutClasses = ['userMenu__layout'];
@@ -27,11 +31,14 @@ function UserMenu() {
         layoutClasses.push('show');
     }
 
-    function toggleDropdown (layoutBoolean, notifBoolean, profileBoolean) {
+    function toggleDropdown(layoutBoolean, notifBoolean, profileBoolean) {
         setDropdown({
-            isVisibleLayout: layoutBoolean,
             isVisibleNotificationDropdown: notifBoolean,
             isVisibleProfileDropdown: profileBoolean
+        });
+        
+        setUserMenu({
+            isVisibleLayout: layoutBoolean
         });
     }    
 
@@ -43,7 +50,7 @@ function UserMenu() {
 
     return (
         <div className='userMenu'>
-            <div className={layoutClasses.join(' ')} onClick={() => toggleDropdown (false, false, false) } ></div>
+            <div className={layoutClasses.join(' ')} onClick={() => toggleDropdown(false, false, false)} ></div>
             <i id='userMenu__bell' className='fa fa-bell fa-2x' aria-hidden='true' onClick={() => toggleDropdown (true, true, false) }>
                 <div className='userMenu__dropdown'>
                     <div id='userMenu__dropdown__circle'>2</div>
