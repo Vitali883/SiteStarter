@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import Login from './LoginBtn';
+import LoginBtn from './LoginBtn';
 
 
 function UserMenu() {
@@ -44,7 +44,7 @@ function UserMenu() {
 
     if (!isLogged) {
         return (
-            <Login />
+            <LoginBtn />
         );
     }
 

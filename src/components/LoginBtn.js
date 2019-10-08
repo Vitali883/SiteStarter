@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 //import { SignUpPopView } from '../actions';
 
 
-function Login() {
+function LoginBtn() {
     // const [userMenuState, setUserMenuState] = useState({
     //     isVisiblePopup: false
     // });
@@ -34,4 +34,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default LoginBtn;

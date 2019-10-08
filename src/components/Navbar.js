@@ -34,6 +34,7 @@ function Navbar(props) {
                 <Link to={`/en/${location}`} onClick={() => dispatch(choosenLanguage('en'))}>EN</Link>
                 <Link to={`/et/${location}`} onClick={() => dispatch(choosenLanguage('et'))}>ET</Link>
             </div>
+            
         </nav>
     );
 }
