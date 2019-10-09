@@ -182,6 +182,15 @@ main {
   grid-area: main;
   background: rgba(243, 244, 246, 0.1);
 }
+@media only screen and (max-width: 670px) {
+  main {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding: 0;
+  }
+}
 /* main end */
 
 /* SideMenu start */
@@ -323,18 +332,6 @@ Header .toggleBtn span {
   /* color: #C14BC3 */
   color:rgb(0, 162, 255);
 }
-
-@media only screen and (max-width: 780px) {
-  .navbar a {
-    font-size: 15px;
-    padding: 0 8px;
-  }
-}
-@media only screen and (max-width: 620px) {
-  .Navbar {
-    display: none;
-  }
-}
 #navbar__languageContainer {
   white-space: nowrap;
 }
@@ -349,6 +346,17 @@ Header .toggleBtn span {
 }
 #navbar__languageContainer button:hover{
   color:rgb(0, 162, 255);
+}
+@media only screen and (max-width: 780px) {
+  .navbar a {
+    font-size: 15px;
+    padding: 0 8px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .navbar {
+    display: none;
+  }
 }
 /* Navbar end */
 
@@ -497,6 +505,11 @@ Header .toggleBtn span {
 .loginForm {
   padding-right: 20px;
   border-style: none solid none none;
+}
+@media only screen and (max-width: 670px) {
+  .loginForm {
+    border: none;
+  }
 }
 
 .registerForm {
