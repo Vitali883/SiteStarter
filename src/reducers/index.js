@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 
-import loggedReducer from './isLogged';
+import userReducer from './user';
 
 import currLangReducer from './currLang';
 
 
 const allReducer = combineReducers({
-    isLogged: loggedReducer,
+    user: userReducer,
     userLanguage: currLangReducer
 });
 

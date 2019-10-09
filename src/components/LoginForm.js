@@ -2,15 +2,16 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 
-import { login } from './../actions/';
 import siteConfig from '../site-config';
+import { login } from './../actions/';
+
 
 
 class LoginForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            userLogin: "",
+            userLogin: "" ,
             userPassword: ""
         }
 
@@ -29,7 +30,6 @@ class LoginForm extends React.Component {
             'email' : handleLogin,
             'password' : handlePassword
         };
-
         return fetch(`${siteConfig.laravelApiUrl}/api/login`, {
             headers: {
             'Accept': 'application/json',
@@ -41,9 +41,9 @@ class LoginForm extends React.Component {
         .then(r => r.json())
         .then(data => {
             if (data.data[1] === 'fail') {
-                alert('Failed to login');
+                alert('failed to login')
             } else {
-                alert('Logged in');
+                alert('Logged in')
                 this.props.login(data.data[0]);
             }
         });
@@ -58,7 +58,7 @@ class LoginForm extends React.Component {
         return(
             <form onSubmit={this.handleSubmit} className="loginForm">
                 <h2>Login</h2>
-                <label>
+                <label htmlFor="userLoginId">
                     <b>
                         <FormattedMessage
                             id='signin.email'
@@ -70,12 +70,13 @@ class LoginForm extends React.Component {
                 <input 
                     type='text'
                     name='userLogin'
+                    id='userLoginId'
                     placeholder='email'
                     value={this.props.userLogin}
                     onChange={this.handleChangeState}
                 />
                 <br />
-                <label>
+                <label htmlFor="userPasswordId">
                     <b>
                         <FormattedMessage
                             id='signin.password'
@@ -87,6 +88,7 @@ class LoginForm extends React.Component {
                 <input
                     type='password'
                     name='userPassword'
+                    id='userPasswordId'
                     placeholder='password'
                     value={this.props.userPassword}
                     onChange={this.handleChangeState}
@@ -103,13 +105,13 @@ class LoginForm extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
+function mapStateToProps() { // (state)
     return {
-        isLogged: state.isUserLogged
+        //isLogged: state.isUserLogged
     }
 }
 
-const mapDispatchToProps = () => {
+function mapDispatchToProps() {
     return {
         login
     }
