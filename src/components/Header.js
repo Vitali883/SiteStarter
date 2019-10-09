@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 
 import Logo from './Logo';
 import Navbar from './Navbar';
-import UserMenu from './UserMenu';
 import SideMenu from './SideMenu';
 import LoginBtn from './LoginBtn';
 

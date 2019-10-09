@@ -31,11 +31,11 @@ class LoginForm extends React.Component {
         };
 
         let response = await userLoginRequest(data);
-        if (response === false) {
-            alert('failed to login');
-        } else {
+        if (response) {
             alert('Logged in');
             this.props.login(response);
+        } else {
+            alert('failed to login');
         }
     }
 
