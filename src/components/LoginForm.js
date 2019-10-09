@@ -2,9 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 
-import siteConfig from '../site-config';
 import { login } from './../actions/';
-
 import userLoginRequest from './../api';
 
 
@@ -32,13 +30,12 @@ class LoginForm extends React.Component {
             'password' : handlePassword
         };
 
-        let temp = await userLoginRequest(data);
-        
-        if (temp === false) {
-            alert('failed to login')
+        let response = await userLoginRequest(data);
+        if (response === false) {
+            alert('failed to login');
         } else {
-            alert('Logged in')
-            this.props.login(temp);
+            alert('Logged in');
+            this.props.login(response);
         }
     }
 

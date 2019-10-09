@@ -1,7 +1,8 @@
 import siteConfig from './site-config';
 
+
 export default async function userLoginRequest(data) {
-    return await fetch(`${siteConfig.laravelApiUrl}/api/login`, {
+    let response = await fetch(`${siteConfig.laravelApiUrl}/api/login`, {
         headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -9,12 +10,10 @@ export default async function userLoginRequest(data) {
         body: JSON.stringify(data),
         method : "POST"
     })
-    .then(r => r.json())
-    .then(data => {
-        if (data.data[1] === 'fail') {
-             return false;
-        } else {
-            return data.data[0];
-        }
-    });
+    let r = await response.json();
+    if (r.data[1] === 'fail') {
+        return false;
+    } else {
+        return r.data[0];
+    }
 }
