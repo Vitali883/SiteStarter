@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { useSelector, useDispatch } from 'react-redux';
 
 import siteConfig from '../site-config';
 
@@ -16,8 +17,10 @@ class LoginForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    
     handleSubmit(event) {
-        event.preventDefault()
+        event.preventDefault();
+        const dispatch = useDispatch();
 
         let handleLogin = this.state.login;
         let handlePassword = this.state.password;
@@ -27,7 +30,7 @@ class LoginForm extends React.Component {
             'password' : handlePassword
         };
 
-        return fetch(`${siteConfig.laravelApiUrl}/api/login`,{
+        return fetch(`${siteConfig.laravelApiUrl}/api/login`, {
             headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -37,10 +40,11 @@ class LoginForm extends React.Component {
         })
         .then(r => r.json())
         .then(data => {
-            if(data.data[1] === 'fail') {
+            if (data.data[1] === 'fail') {
                 alert('Fail');
-            }else{
+            } else {
                 alert('Logged in');
+                dispatch(login(data.data[0]));
             }
         });
     }
