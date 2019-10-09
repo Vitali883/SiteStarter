@@ -28,7 +28,7 @@ function loadUserSession() {
         let serializedState = localStorage.getItem('state');
         
         if (serializedState === null) {
-            const stateConfig = { userLanguage: lang, isLogged: false };
+            const stateConfig = { userLanguage: lang, isLogged: {isUserLogged: false} };
             const state = JSON.stringify(stateConfig);
             localStorage.setItem('state', state);
             //window.location.reload(); // TODO

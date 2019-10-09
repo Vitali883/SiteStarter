@@ -86,9 +86,9 @@ class LoginForm extends React.Component {
                 <br />
                 <input
                     type='password'
-                    name='password'
+                    name='userPassword'
                     placeholder='password'
-                    value={this.props.password}
+                    value={this.props.userPassword}
                     onChange={this.handleChangeState}
                 />
                 <br />
@@ -105,7 +105,7 @@ class LoginForm extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        isLogged: state.isLogged
+        isLogged: state.isUserLogged
     }
 }
 
