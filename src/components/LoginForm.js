@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import siteConfig from '../site-config';
 import { login } from './../actions/';
 
+import userLoginRequest from './../api';
 
 
 class LoginForm extends React.Component {
@@ -20,7 +21,7 @@ class LoginForm extends React.Component {
     }
 
     
-    handleSubmit(event) {
+    async handleSubmit(event) {
         event.preventDefault();
 
         let handleLogin = this.state.userLogin;
@@ -30,23 +31,15 @@ class LoginForm extends React.Component {
             'email' : handleLogin,
             'password' : handlePassword
         };
-        return fetch(`${siteConfig.laravelApiUrl}/api/login`, {
-            headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-            method : "POST"
-        })
-        .then(r => r.json())
-        .then(data => {
-            if (data.data[1] === 'fail') {
-                alert('failed to login')
-            } else {
-                alert('Logged in')
-                this.props.login(data.data[0]);
-            }
-        });
+
+        let temp = await userLoginRequest(data);
+        
+        if (temp === false) {
+            alert('failed to login')
+        } else {
+            alert('Logged in')
+            this.props.login(temp);
+        }
     }
 
     handleChangeState(event) {
