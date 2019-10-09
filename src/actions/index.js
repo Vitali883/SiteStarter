@@ -1,7 +1,8 @@
 
-export function login() {
+export function login(userInfo) {
     return {
-        type: 'SIGN_IN'
+        type: 'SIGN_IN',
+        payload: userInfo
     };
 }
 

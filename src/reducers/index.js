@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import loggedReducer from './isLogged'
+import loggedReducer from './isLogged';
 
-import currLangReducer from './currLang'
+import currLangReducer from './currLang';
 
 
 const allReducer = combineReducers({

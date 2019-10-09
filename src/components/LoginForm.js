@@ -1,7 +1,8 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { useSelector, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 
+import { login } from './../actions/';
 import siteConfig from '../site-config';
 
 
@@ -9,8 +10,8 @@ class LoginForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            login: "",
-            password: ""
+            userLogin: "",
+            userPassword: ""
         }
 
         this.handleChangeState = this.handleChangeState.bind(this);
@@ -20,10 +21,9 @@ class LoginForm extends React.Component {
     
     handleSubmit(event) {
         event.preventDefault();
-        const dispatch = useDispatch();
 
-        let handleLogin = this.state.login;
-        let handlePassword = this.state.password;
+        let handleLogin = this.state.userLogin;
+        let handlePassword = this.state.userPassword;
 
         const data = {
             'email' : handleLogin,
@@ -41,10 +41,10 @@ class LoginForm extends React.Component {
         .then(r => r.json())
         .then(data => {
             if (data.data[1] === 'fail') {
-                alert('Fail');
+                alert('Failed to login');
             } else {
                 alert('Logged in');
-                dispatch(login(data.data[0]));
+                this.props.login(data.data[0]);
             }
         });
     }
@@ -69,9 +69,9 @@ class LoginForm extends React.Component {
                 <br />
                 <input 
                     type='text'
-                    name='login'
+                    name='userLogin'
                     placeholder='email'
-                    value={this.props.login}
+                    value={this.props.userLogin}
                     onChange={this.handleChangeState}
                 />
                 <br />
@@ -103,4 +103,16 @@ class LoginForm extends React.Component {
     }
 }
 
-export default LoginForm;
+const mapStateToProps = (state) => {
+    return {
+        isLogged: state.isLogged
+    }
+}
+
+const mapDispatchToProps = () => {
+    return {
+        login
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps())(LoginForm)
