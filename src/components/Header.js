@@ -20,7 +20,7 @@ function Header(props) {
                     <span className='toggleBtn'></span>
                 </div>
             </button>
-            <SideMenu isVisible={sideMenuState.isVisibleMenu} />
+            <SideMenu onClose={() => setSideMenu({isVisibleMenu:false})} isVisible={sideMenuState.isVisibleMenu} />
             <Logo />
             <Navbar location={props.location} />
             {/* <UserMenu /> */}
